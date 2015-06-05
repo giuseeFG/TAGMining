@@ -9,13 +9,12 @@ var output = [];
 var docs = [];
 var title = '';
 var trec_id = '';
+var i = 0;
+
 
 //PHASE 1 -  CREATE DOCS
 //    'C:/Users/Giuseppe/Desktop/TAGMining/TAGMining/new_file.warc'
 //    '/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/new_file.warc'
-//    '/Users/tiziano/TAGMining/new_file.warc'
-
-
 fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/new_file.warc')
   .pipe(w)
   .on('data', function(data) {
@@ -31,18 +30,15 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining
               (typeof result !== "undefined") &&
               (typeof result.HTML !== "undefined") &&
               (typeof result.HTML.HEAD !== "undefined") &&
-              (typeof result.HTML.HEAD[0] !== "undefined")
+              (typeof result.HTML.HEAD[0] !== "undefined") &&
+              (typeof result.HTML.HEAD[0].TITLE !== "undefined")
             ) {
-            if(result.HTML.HEAD[0].TITLE == null) {
-              var indexEndTitle = output.content.search("</title>");
-              var indexBeginTitle = output.content.search("<title>") + 7;
-              output.title = output.content.substring(indexBeginTitle, indexEndTitle);
-              }
               output.title = result.HTML.HEAD[0].TITLE[0];
-              }
+            }
           });
         } catch (e) {
-        }
+          console.log(e);
+          }
       }
     }
     try {
@@ -53,20 +49,19 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining
         content: output.content.substring(indexOfBodyBegin, indexOfBodyEnd),
         title: output.title
       }
-      // console.log(doc.title);
       
       docs.push(doc);
     }
     catch (err) {
-      //console.log("errore");
     }
-    //extractPhrase(docs);
-    console.log(docs);
   });
+    extractPhrases(docs);
 
 
 
-//PHASE 2 - EXTRACT PHRASES
+
+
+ //PHASE 2 - EXTRACT PHRASES
 
 function extractPhrases(docs) {
   for (var i = 0; i < docs.length; i++) {
@@ -88,7 +83,6 @@ function extractPhrases(docs) {
     console.log("\n\n\n\n" + docs[i].trec_id + "\t\t" +text);
   }
 }
-
 
 
 
