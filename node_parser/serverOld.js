@@ -6,7 +6,6 @@ var http = require('http'),
 var WARCStream = require('warc');
 var w = new WARCStream();
 var output = [];
-var docs = [];
 var title = '';
 var trec_id = '';
 var i = 0;
@@ -35,50 +34,32 @@ fs.createReadStream('C:/Users/Giuseppe/Desktop/TAGMining/TAGMining/new_file.warc
           });
         } catch (e) {
           i++;
-          //console.log("ERRORE NUMERO " + i);
+          console.log("ERRORE NUMERO " + i);
         }
       }
     }
+
     try {
-      var indexOfBodyBegin = output.content.indexOf("<body>");
-      var indexOfBodyEnd = output.content.indexOf("</body>") + 7;
+
       var doc = {
         trec_id: output.trec_id_long.substring(output.trec_id_long.length - 5, output.trec_id_long.length),
-        content: output.content.substring(indexOfBodyBegin, indexOfBodyEnd),
-        title: output.title
+        title: output.title,
+        content: output.content
+
       }
-      //console.log(doc.content);
+      console.log(doc.trec_id);
       console.log(doc.title);
-      
+
+      var docs = [];
       docs.push(doc);
+    } catch (err) {
+      console.log("errore");
     }
-    catch (err) {
-      //console.log("errore");
-    }
-    //extractPhrase(docs);
-    //console.log(docs);
+    // extractPhrase(docs);
   });
 
- // PHASE 2 - EXTRACT PHRASES
+// // PHASE 2 - EXTRACT PHRASES
 
-function extractPhrases(docs) {
-    for (var i = 0; i < docs.length; i++) {
-        //var indexBegin = docs[i].content.search("<(.*)>");
-        var indexBegin = docs[i].content.search(">");
-        while (docs[i].content.indexOf("<") !== -1) { //se esiste un figlio
-          indexBegin = docs[i].content.search(">");
-          console.log("sono qui");
-        }
-        var contentTemp = docs[i].content.substring(indexBegin);
-        var indexEnd = docs[i].content.search("</(.*)>");
-        console.log("asd " + contentTemp.substring(indexBegin, indexEnd))
+// function extractPhrases(docs) {
 
-
-
-
-        //var indexEnd = docs[i].content.search("[^<(.*)]</(.*)>");
-
-     //   console.log(docs[i].content.substring(indexBegin, indexEnd));
-    }
-
-}
+// }
