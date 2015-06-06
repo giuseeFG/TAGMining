@@ -10,9 +10,13 @@ var docs = [];
 var title = '';
 var trec_id = '';
 var html_strip = require('htmlstrip-native');
+var removingList = [];
 
+var ORD = /\b\d+th\b|\b\d+st\b|\b\d+nd\b|\b\d+rd\b/ig;
+var DATE1 = /\b(jan|feb|marc|apr|may|jun|jul|aug|sep|oct|nov|dec)\b/ig;
+var DATE2 = /\b(january|february|march|april|june|july|august|september|october|november|december)\b/ig;
+var DATE3 = /[0-2][0-9]|3[0-1]-DATE2|DATE1-[1-2][0-9][0-9][0-9]/g;
 
-var ORD = "\b\d+th\b"
 
 //PHASE 1 -  CREATE DOCS
 //    'C:/Users/Giuseppe/Desktop/TAGMining/TAGMining/new_file.warc'
@@ -72,7 +76,7 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 			doc.content = html_strip.html_strip(doc.content, options);
 			docs.push(doc);
 
-			
+		//Extract Phrases splitting by . ! ?
 			splitString = function(string, splitters) {
 	    		var list = [string];
 			    for(var i=0, len=splitters.length; i<len; i++) {
@@ -95,33 +99,47 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 			        return acc.concat(val.constructor === Array ? flatten(val) : val);
 			    },[]);
 			}
+
 			var stringToSplit = doc.content;
 			var splitList = [". ", "! ", "? "];
 			doc.content = splitString(stringToSplit, splitList);
 
+
+			// Dump short or long phrases
 			var arrayTemp = [];
-			for (var j = 0; j<doc.content.length; j++) {
+			for (var j = 0; j < doc.content.length; j++) {
 				var temp = doc.content[j].split(" ");
 				if(temp.length > 4 && temp.length < 39) {
 					arrayTemp.push(doc.content[j]);
 				}
 			}
-			
+
 			//saving trac_id of useless docs to remove them later
 			if(arrayTemp.length == 0 || typeof arrayTemp === 'undefined') {
-				var removingList = [];
 				removingList.push(doc.trec_id);
 			}
 
-
-
 			doc.content = arrayTemp;
+			
+			// Replacing interest numbers with TAGS
+			// ORDINAL OK, DATE TO DO!
+			for (var k = 0; k < doc.content.length; k++) {
+				doc.content[k] = doc.content[k].replace(ORD, '#ORD')
+				.replace(DATE1, '#DATE').replace(DATE2, '#DATE').replace(DATE3, '#DATE');
+			}
+			doc.title = doc.title.replace(ORD, '#ORD')
+			.replace(DATE1, '#DATE').replace(DATE2, '#DATE').replace(DATE3, '#DATE');
 
-			console.log(JSON.stringify(doc) + "\n\n\n");
+
+
+
+
+				console.log(JSON.stringify(doc) + "\n\n\n");
 
 
 			//handle empty
 			//.... TODO
+			
 		}
 
 		catch (err) {
@@ -129,6 +147,5 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 		}
 
 	});
-
 
 
