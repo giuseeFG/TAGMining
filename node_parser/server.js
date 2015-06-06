@@ -9,6 +9,8 @@ var output = [];
 var docs = [];
 var title = '';
 var trec_id = '';
+var html_strip = require('htmlstrip-native');
+
 
 //PHASE 1 -  CREATE DOCS
 //    'C:/Users/Giuseppe/Desktop/TAGMining/TAGMining/new_file.warc'
@@ -48,6 +50,7 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining
     try {
       var indexOfBodyBegin = output.content.indexOf("<body>");
       var indexOfBodyEnd = output.content.indexOf("</body>") + 7;
+
       var doc = {
         trec_id: output.trec_id_long.substring(output.trec_id_long.length - 5, output.trec_id_long.length),
         content: output.content.substring(indexOfBodyBegin, indexOfBodyEnd),
@@ -55,25 +58,7 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining
       }
       // console.log(doc.title);
       
-      docs.push(doc);
-    }
-    catch (err) {
-      //console.log("errore");
-    }
-    //extractPhrase(docs);
-    console.log(docs);
-  });
 
-
-
-//PHASE 2 - EXTRACT PHRASES
-
-function extractPhrases(docs) {
-  for (var i = 0; i < docs.length; i++) {
-
-    var html_strip = require('htmlstrip-native');
-   
-    
     var options = {
         include_script : false,
         include_style : false,
@@ -83,13 +68,17 @@ function extractPhrases(docs) {
     };
    
   // Strip tags and decode HTML entities 
-    var text = html_strip.html_strip(docs[i].content, options);
-   
-    console.log("\n\n\n\n" + docs[i].trec_id + "\t\t" +text);
-  }
-}
+    doc.content = html_strip.html_strip(doc.content, options);
+    console.log(JSON.stringify(doc) + "\n\n");
+    docs.push(doc);
 
+    }
+    
+    catch (err) {
+      //console.log("errore");
+    }
 
+  });
 
 
 
