@@ -1,19 +1,19 @@
 var http = require('http'),
 	fs = require('fs'),
 	url = require('url'),
-	parseString = require('xml2js').parseString,
-	html_strip = require('htmlstrip-native'),
-	WARCStream = require('warc');
+	parseString = require('xml2js').parseString;
 
+var WARCStream = require('warc');
 var w = new WARCStream();
 var output = [];
 var docs = [];
 var title = '';
 var trec_id = '';
+var html_strip = require('htmlstrip-native');
 var removingList = [];
-var count = 0;
+var cont = 0;
 fs.writeFile("/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/test.txt", "START", function(err) {
-  if(err) {
+    		if(err) {
         		return console.log(err);
     		}
 
@@ -33,14 +33,12 @@ var DATE7 = /\b(january|february|march|april|june|july|august|september|october|
 
 // date format: "january 21, 2008", "234 b.c.", "1990-12-18", "19-12-1998", "1990 jan 20","12 jan 2008", "Feb 1st" 
 
-var MONEY1 = /\b.(\$|\€|\¥|\£)([1-9]{1}[0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})?|(\.[0-9]{1,2})?).\b/ig;
-var MONEY2 = /\b.(dollar(s?)|euro(s?)|yen(s?)|pound(s?))([1-9]{1}[0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})?|(\.[0-9]{1,2})?).\b/igm;
-var MONEY3 = /\b.([1-9]{1}[0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})?|(\.[0-9]{1,2}))(\$|\€|\¥|\£).\b/ig;
-var MONEY4 = /\b.([1-9]{1}[0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})?|(\.[0-9]{1,2}))(dollar+s?|euro+s?|yen+s?|pound+s?).\b/igm;
+var MONEY1 = /(\$|\€|\¥|\£)\s?([1-9][0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})|(\.[0-9]{1,2}))(\smillion(s)?|\sbillion(s)?|\sbn|\smn)?(million(s)?|billion(s)?|bn|mn)?/igm;
+var MONEY2 = /(dollar(s?)|euro(s?)|yen(s?)|pound(s?))\s?([1-9][0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})|(\.[0-9]{1,2}))(\smillion(s)?|\sbillion(s)?|\sbn|\smn)?(million(s)?|billion(s)?|bn|mn)?/igm;
+var MONEY3 = /([1-9][0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})|(\.[0-9]{1,2}))\-?(\smillion(s)?|\sbillion(s)?|\sbn|\smn)?(million(s)?|billion(s)?|bn|mn)?(\s?dollar(s?)|\s?euro(s?)|\s?yen(s?)|\?pound(s?))/igm;
+var MONEY4 = /([1-9][0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})|(\.[0-9]{1,2}))\-?(\smillion(s)?|\sbillion(s)?|\sbn|\smn)?(million(s)?|billion(s)?|bn|mn)?(\s?\$|\s?\€|\s?\¥|\s?\£)/igm;
 
-
-
-
+//money format....
 
 var DIST1 = /\b((0\.[0-9]+)|([1-9](\,)?(\.)?[0-9]*(\,)?(\.)?[0-9]*(\,)?))\s?(kilometer(s?)|meter(s?)|mile(s?)|centimeter(s?)|millimeter(s?)|foot|feet|yard(s?)|inch((es)?)|km|m|cm|mm|ft|in|yd|mi|nmi|nm|ly)\b/igm;
 var DIST2 = /\b(kilometer(s?)|meter(s?)|mile(s?)|centimeter(s?)|millimeter(s?)|foot|feet|yard(s?)|inch((es)?)|km|m|cm|mm|ft|yd|mi|nmi|nm|ly)(\.)?\s?((0\.[0-9]+)|([1-9](\,)?(\.)?[0-9]*(\,)?(\.)?[0-9]*(\,)?))\b/igm;
@@ -84,6 +82,8 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 				}
 			}
 		}
+
+
 		try {
 			var indexOfBodyBegin = output.content.indexOf("<body>");
 			var indexOfBodyEnd = output.content.indexOf("</body>") + 7;
@@ -98,9 +98,7 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 			var options = {
 				include_script : false,
 				include_style : false,
-				compact_whitespace : true,
-				include_attributes : { 'alt': true }
-
+				compact_whitespace : true
 		};
 	 
 		// Strip tags and decode HTML entities 
@@ -152,37 +150,30 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 
 			doc.content = arrayTemp;
 			
-			// Replacing interest numbers with TAGS from body
+			// Replacing interest numbers with TAGS in BODY
+
 			for (var k = 0; k < doc.content.length; k++) {
 				doc.content[k] = doc.content[k].replace(ORD, '#ORD');
 				doc.content[k] = doc.content[k].replace(DATE1, '#DATE').replace(DATE2, '#DATE').replace(DATE3, '#DATE').replace(DATE5, '#DATE').replace(DATE4, '#DATE').replace(DATE6, '#DATE').replace(DATE7, '#DATE');
-				doc.content[k] = doc.content[k].replace(MONEY1, '#MONEY').replace(MONEY2, '#MONEY').replace(MONEY3, '#MONEY').replace(MONEY4, '#MONEY');
+				doc.content[k] = doc.content[k].replace(MONEY1, '#MONEY1').replace(MONEY2, '#MONEY2').replace(MONEY3, '#MONEY3').replace(MONEY4, '#MONEY4');
 				doc.content[k] = doc.content[k].replace(DIST1, '#DIST1').replace(DIST2, '#DIST2');
 			}
 
-			// Replacing interest numbers with TAGS from title
+			// Replacing interest numbers with TAGS in TITLE
 			doc.title = doc.title.replace(ORD, '#ORD');
 			doc.title = doc.title.replace(DATE1, '#DATE').replace(DATE2, '#DATE').replace(DATE3, '#DATE').replace(DATE5, '#DATE').replace(DATE4, '#DATE').replace(DATE6, '#DATE').replace(DATE7, '#DATE');
 			doc.title = doc.title.replace(MONEY1, '#MONEY').replace(MONEY2, '#MONEY').replace(MONEY3, '#MONEY').replace(MONEY4, '#MONEY');
-			doc.title = doc.title.replace(DIST1, '#DIST').replace(DIST2, '#DIST');
+			doc.title = doc.title.replace(DIST1, '#DIST1').replace(DIST2, '#DIST2');
 			
-			var isConsistent = true;
-
-			// writing on file
-			for(var x = 0; x<removingList.length;x++) {
-				if(doc.trec_id === removingList[x]) {
-					isConsistent = false;
-				}
-			}
-			if(isConsistent) {
-				fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/test.txt', JSON.stringify(doc) + "\n\n\n", function (err) {
-		    		if(err) {
-	    	    		return console.log(err + "ERRORE");
-	    			}
-	    		count++;
-	    		console.log("ID: " + doc.trec_id +  "    NUMERO: "  + count);
-				}); 
-			}
+			for(var)
+			fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/test.txt', JSON.stringify(doc) + "\n\n\n", function (err) {
+	    		if(err) {
+    	    		return console.log(err + "ERRORE");
+    			}
+    			cont++;
+    			console.log(cont);
+			}); 
+		
 			
 			
 			//console.log(JSON.stringify(doc) + "\n\n\n");
@@ -196,7 +187,7 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 		catch (err) {
 			console.log(err + "CATCH");
 		}
-		isConsistent =  true;
+
 	});
 
 

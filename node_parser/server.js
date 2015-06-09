@@ -82,6 +82,8 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 				}
 			}
 		}
+
+
 		try {
 			var indexOfBodyBegin = output.content.indexOf("<body>");
 			var indexOfBodyEnd = output.content.indexOf("</body>") + 7;
@@ -96,9 +98,7 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 			var options = {
 				include_script : false,
 				include_style : false,
-				compact_whitespace : true,
-				include_attributes : { 'alt': true }
-
+				compact_whitespace : true
 		};
 	 
 		// Strip tags and decode HTML entities 
@@ -150,20 +150,22 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 
 			doc.content = arrayTemp;
 			
-			// Replacing interest numbers with TAGS
-			// ORDINAL OK, DATE OK!
+			// Replacing interest numbers with TAGS in BODY
+
 			for (var k = 0; k < doc.content.length; k++) {
 				doc.content[k] = doc.content[k].replace(ORD, '#ORD');
 				doc.content[k] = doc.content[k].replace(DATE1, '#DATE').replace(DATE2, '#DATE').replace(DATE3, '#DATE').replace(DATE5, '#DATE').replace(DATE4, '#DATE').replace(DATE6, '#DATE').replace(DATE7, '#DATE');
 				doc.content[k] = doc.content[k].replace(MONEY1, '#MONEY1').replace(MONEY2, '#MONEY2').replace(MONEY3, '#MONEY3').replace(MONEY4, '#MONEY4');
 				doc.content[k] = doc.content[k].replace(DIST1, '#DIST1').replace(DIST2, '#DIST2');
 			}
+
+			// Replacing interest numbers with TAGS in TITLE
 			doc.title = doc.title.replace(ORD, '#ORD');
 			doc.title = doc.title.replace(DATE1, '#DATE').replace(DATE2, '#DATE').replace(DATE3, '#DATE').replace(DATE5, '#DATE').replace(DATE4, '#DATE').replace(DATE6, '#DATE').replace(DATE7, '#DATE');
 			doc.title = doc.title.replace(MONEY1, '#MONEY').replace(MONEY2, '#MONEY').replace(MONEY3, '#MONEY').replace(MONEY4, '#MONEY');
 			doc.title = doc.title.replace(DIST1, '#DIST1').replace(DIST2, '#DIST2');
 			
-
+			for(var)
 			fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/test.txt', JSON.stringify(doc) + "\n\n\n", function (err) {
 	    		if(err) {
     	    		return console.log(err + "ERRORE");
