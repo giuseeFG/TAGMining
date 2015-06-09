@@ -1,19 +1,19 @@
 var http = require('http'),
 	fs = require('fs'),
 	url = require('url'),
-	parseString = require('xml2js').parseString;
+	parseString = require('xml2js').parseString,
+	html_strip = require('htmlstrip-native'),
+	WARCStream = require('warc');
 
-var WARCStream = require('warc');
 var w = new WARCStream();
 var output = [];
 var docs = [];
 var title = '';
 var trec_id = '';
-var html_strip = require('htmlstrip-native');
 var removingList = [];
-var cont = 0;
+var count = 0;
 fs.writeFile("/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/test.txt", "START", function(err) {
-    		if(err) {
+  if(err) {
         		return console.log(err);
     		}
 
@@ -152,28 +152,37 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 
 			doc.content = arrayTemp;
 			
-			// Replacing interest numbers with TAGS
-			// ORDINAL OK, DATE OK!
+			// Replacing interest numbers with TAGS from body
 			for (var k = 0; k < doc.content.length; k++) {
 				doc.content[k] = doc.content[k].replace(ORD, '#ORD');
 				doc.content[k] = doc.content[k].replace(DATE1, '#DATE').replace(DATE2, '#DATE').replace(DATE3, '#DATE').replace(DATE5, '#DATE').replace(DATE4, '#DATE').replace(DATE6, '#DATE').replace(DATE7, '#DATE');
 				doc.content[k] = doc.content[k].replace(MONEY1, '#MONEY').replace(MONEY2, '#MONEY').replace(MONEY3, '#MONEY').replace(MONEY4, '#MONEY');
 				doc.content[k] = doc.content[k].replace(DIST1, '#DIST1').replace(DIST2, '#DIST2');
 			}
+
+			// Replacing interest numbers with TAGS from title
 			doc.title = doc.title.replace(ORD, '#ORD');
 			doc.title = doc.title.replace(DATE1, '#DATE').replace(DATE2, '#DATE').replace(DATE3, '#DATE').replace(DATE5, '#DATE').replace(DATE4, '#DATE').replace(DATE6, '#DATE').replace(DATE7, '#DATE');
 			doc.title = doc.title.replace(MONEY1, '#MONEY').replace(MONEY2, '#MONEY').replace(MONEY3, '#MONEY').replace(MONEY4, '#MONEY');
-			doc.title = doc.title.replace(DIST1, '#DIST1').replace(DIST2, '#DIST2');
+			doc.title = doc.title.replace(DIST1, '#DIST').replace(DIST2, '#DIST');
 			
+			var isConsistent = true;
 
-			fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/test.txt', JSON.stringify(doc) + "\n\n\n", function (err) {
-	    		if(err) {
-    	    		return console.log(err + "ERRORE");
-    			}
-    			cont++;
-    			console.log(cont);
-			}); 
-		
+			// writing on file
+			for(var x = 0; x<removingList.length;x++) {
+				if(doc.trec_id === removingList[x]) {
+					isConsistent = false;
+				}
+			}
+			if(isConsistent) {
+				fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/test.txt', JSON.stringify(doc) + "\n\n\n", function (err) {
+		    		if(err) {
+	    	    		return console.log(err + "ERRORE");
+	    			}
+	    		count++;
+	    		console.log("ID: " + doc.trec_id +  "    NUMERO: "  + count);
+				}); 
+			}
 			
 			
 			//console.log(JSON.stringify(doc) + "\n\n\n");
@@ -187,7 +196,7 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 		catch (err) {
 			console.log(err + "CATCH");
 		}
-
+		isConsistent =  true;
 	});
 
 
