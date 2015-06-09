@@ -21,7 +21,7 @@ var DATE3 = /\b(19|20)[0-9][0-9]([-|\.|\/])(0[1-9]|1[012])([-|\.|\/])(0[1-9]|[12
 var DATE4 = /\b((0[1-9]|[12][0-9]|3[01]))([-|\.|\/])(0[1-9]|1[012])([-|\.|\/])(19|20)[0-9][0-9]\b/igm;
 var DATE5 = /\b(19|20)[0-9][0-9] (january|february|march|april|june|july|august|september|october|november|december|jan|feb|marc|apr|may|jun|jul|aug|sep|oct|nov|dec) ((0[1-9]|[12][0-9]|3[01]))\b/igm;
 var DATE6 = /\b(january|february|march|april|june|july|august|september|october|november|december|jan|feb|marc|apr|may|jun|jul|aug|sep|oct|nov|dec) (#ORD)\b/igm;
-// date format: "january 21, 2008", "234 b.c.", "1990-12-18", "19-12-1998", "1990 jan 20" 
+// date format: "january 21, 2008", "234 b.c.", "1990-12-18", "19-12-1998", "1990 jan 20", "Feb 1st" 
 
 
 
