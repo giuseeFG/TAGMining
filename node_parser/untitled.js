@@ -1,34 +1,70 @@
 var http = require('http'),
 	fs = require('fs'),
 	url = require('url'),
-	parseString = require('xml2js').parseString;
+	parseString = require('xml2js').parseString,
+	html_strip = require('htmlstrip-native'),
+	WARCStream = require('warc');
 
-var WARCStream = require('warc');
 var w = new WARCStream();
 var output = [];
 var docs = [];
 var title = '';
 var trec_id = '';
-var html_strip = require('htmlstrip-native');
 var removingList = [];
+var count = 0;
+
+
+// //Create output file 2
+// fs.writeFile("/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT2.txt", "OUTPUT 2\n", function(err) {
+//  	if(err) {
+//         return console.log(err);
+//    	}
+//    	console.log("The file was saved!");
+// }); 
+
+
+
+// //Create output file 3
+// fs.writeFile("/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT3.txt", "OUTPUT 3\n", function(err) {
+//  	if(err) {
+//         return console.log(err);
+//    	}
+//    	console.log("The file was saved!");
+// }); 
+
+
+
+
+
+
 
 var ORD = /\b\d+th\b|\b\d+st\b|\b\d+nd\b|\b\d+rd\b/igm;
 
 
-var DATE1 = /\b(january|february|march|april|june|july|august|september|october|november|december|jan|feb|marc|apr|may|jun|jul|aug|sep|oct|nov|dec) (0[1-9]|[12][0-9]|3[0-1]), ((1?[0-9]|20)[0-9][0-9])\b/igm;
-var DATE2 = /[1-9]+ ?((b\.c\.)|(a\.?d\.?))/igm
-var DATE3 = /\b(19|20)[0-9][0-9]([-|\.|\/])(0[1-9]|1[012])([-|\.|\/])(0[1-9]|[12][0-9]|3[01])\b/igm;
-var DATE4 = /\b((0[1-9]|[12][0-9]|3[01]))([-|\.|\/])(0[1-9]|1[012])([-|\.|\/])(19|20)[0-9][0-9]\b/igm;
-var DATE5 = /\b(19|20)[0-9][0-9] (january|february|march|april|june|july|august|september|october|november|december|jan|feb|marc|apr|may|jun|jul|aug|sep|oct|nov|dec) ((0[1-9]|[12][0-9]|3[01]))\b/igm;
-var DATE6 = /\b(january|february|march|april|june|july|august|september|october|november|december|jan|feb|marc|apr|may|jun|jul|aug|sep|oct|nov|dec) (#ORD)\b/igm;
+var DATE1 = /\b(january|february|march|april|june|july|august|september|october|november|december|jan|feb|marc|apr|may|jun|jul|aug|sep|oct|nov|dec)\s(0?[1-9]|[12][0-9]|3[0-1])(,\s((1?[0-9]|20)[0-9][0-9]))?\b/igm;
+var DATE2 = /[1-9]+\s?((b\.c\.)|(a\.?d\.?))/igm
+var DATE3 = /\b(19|20)[0-9][0-9]([-|\.|\/|\s])(0[1-9]|1[012])([-|\.|\/|\s])(0?[1-9]|[12][0-9]|3[01])\b/igm;
+var DATE4 = /\b((0?[1-9]|[12][0-9]|3[01]))([-|\.|\/|\s])(0?[1-9]|1[012])([-|\.|\/|\s])(19|20)[0-9][0-9]\b/igm;
+var DATE5 = /\b(19|20)[0-9][0-9]\s(january|february|march|april|june|july|august|september|october|november|december|jan|feb|marc|apr|may|jun|jul|aug|sep|oct|nov|dec)\s((0?[1-9]|[12][0-9]|3[01]))\b/igm;
+var DATE6 = /\b((0?[1-9]|[12][0-9]|3[01]))\s(january|february|march|april|june|july|august|september|october|november|december|jan|feb|marc|apr|may|jun|jul|aug|sep|oct|nov|dec)(\,)?\s(19|20)[0-9][0-9]\b/igm;
+var DATE7 = /\b(january|february|march|april|june|july|august|september|october|november|december|jan|feb|marc|apr|may|jun|jul|aug|sep|oct|nov|dec)\s(#ORD)\b/igm;
 
-// date format: "january 21, 2008", "234 b.c.", "1990-12-18", "19-12-1998", "1990 jan 20", "Feb 1st" 
-
+// date format: "january 21, 2008", "234 b.c.", "1990-12-18", "19-12-1998", "1990 jan 20","12 jan 2008", "Feb 1st" 
 
 var MONEY1 = /(\$|\€|\¥|\£)\s?([1-9][0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})|(\.[0-9]{1,2}))(\smillion(s)?|\sbillion(s)?|\sbn|\smn)?(million(s)?|billion(s)?|bn|mn)?/igm;
 var MONEY2 = /(dollar(s?)|euro(s?)|yen(s?)|pound(s?))\s?([1-9][0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})|(\.[0-9]{1,2}))(\smillion(s)?|\sbillion(s)?|\sbn|\smn)?(million(s)?|billion(s)?|bn|mn)?/igm;
 var MONEY3 = /([1-9][0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})|(\.[0-9]{1,2}))\-?(\smillion(s)?|\sbillion(s)?|\sbn|\smn)?(million(s)?|billion(s)?|bn|mn)?(\s?dollar(s?)|\s?euro(s?)|\s?yen(s?)|\?pound(s?))/igm;
 var MONEY4 = /([1-9][0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})|(\.[0-9]{1,2}))\-?(\smillion(s)?|\sbillion(s)?|\sbn|\smn)?(million(s)?|billion(s)?|bn|mn)?(\s?\$|\s?\€|\s?\¥|\s?\£)/igm;
+
+
+
+var DIST1 = /\b((0\.[0-9]+)|([1-9](\,)?(\.)?[0-9]*(\,)?(\.)?[0-9]*(\,)?))\s?(kilometer(s?)|meter(s?)|mile(s?)|centimeter(s?)|millimeter(s?)|foot|feet|yard(s?)|inch((es)?)|km|m|cm|mm|ft|in|yd|mi|nmi|nm|ly)\b/igm;
+var DIST2 = /\b(kilometer(s?)|meter(s?)|mile(s?)|centimeter(s?)|millimeter(s?)|foot|feet|yard(s?)|inch((es)?)|km|m|cm|mm|ft|yd|mi|nmi|nm|ly)(\.)?\s?((0\.[0-9]+)|([1-9](\,)?(\.)?[0-9]*(\,)?(\.)?[0-9]*(\,)?))\b/igm;
+
+// distance format: "0.1 km", "0.2m", "100 kilometers", "65yards", "KM. 121", "100,292.76 ft"
+
+var PHONE = /(1\s*[-\/\.]?)?(\((\d{3})\)|(\d{3}))\s*[-\/\.]?\s*(\d{3})\s*[-\/\.]?\s*(\d{4})\s*(([xX]|[eE][xX][tT])\.?\s*(\d+))*\b/igm;
+
 
 
 //PHASE 1 -  CREATE DOCS
@@ -70,6 +106,10 @@ fs.createReadStream('/Users/tiziano/project_giw/ducumenti_motore_ricerca/New02.w
 			var indexOfBodyBegin = output.content.indexOf("<body>");
 			var indexOfBodyEnd = output.content.indexOf("</body>") + 7;
 
+			//Removing a tags
+			var a_tag = /<a(.*?)<\/a>/gmi;
+			output.content = output.content.replace(a_tag, "");
+
 			var doc = {
 				trec_id: output.trec_id_long.substring(output.trec_id_long.length - 5, output.trec_id_long.length),
 				content: output.content.substring(indexOfBodyBegin, indexOfBodyEnd),
@@ -80,9 +120,7 @@ fs.createReadStream('/Users/tiziano/project_giw/ducumenti_motore_ricerca/New02.w
 			var options = {
 				include_script : false,
 				include_style : false,
-				compact_whitespace : true,
-				include_attributes : { 'alt': true }
-
+				compact_whitespace : true
 		};
 	 
 		// Strip tags and decode HTML entities 
@@ -133,19 +171,59 @@ fs.createReadStream('/Users/tiziano/project_giw/ducumenti_motore_ricerca/New02.w
 			}
 
 			doc.content = arrayTemp;
+			var isConsistent = true;
+
+			// writing on file
+			// for(var x = 0; x<removingList.length;x++) {
+			// 	if(doc.trec_id === removingList[x]) {
+			// 		isConsistent = false;
+			// 	}
+			// }
+			// // if(isConsistent) {
+			// // 	for(var y = 0; y<doc.content.length; y++) {
+			// // 		fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT2.txt', doc.trec_id + "\t" + doc.content[y] + "\n", function (err) {
+		 //    			if(err) {
+	  //   	    			return console.log(err + "ERRORE");
+	  //   				}
+	  //   				console.log("ID: " + doc.trec_id +  "    NUMERO: "  + count);
+			// 		}); 
+			// 	}
 			
-			// Replacing interest numbers with TAGS
-			// ORDINAL OK, DATE OK!
+			// }
+
+
+			// Replacing interest numbers with TAGS from body
 			for (var k = 0; k < doc.content.length; k++) {
 				doc.content[k] = doc.content[k].replace(ORD, '#ORD');
-				doc.content[k] = doc.content[k].replace(DATE1, '#DATE').replace(DATE2, '#DATE').replace(DATE3, '#DATE').replace(DATE5, '#DATE').replace(DATE4, '#DATE').replace(DATE6, '#DATE');
-				doc.content[k] = doc.content[k].replace(MONEY1, '#MONEY1').replace(MONEY2, '#MONEY2').replace(MONEY3, '#MONEY3').replace(MONEY4, '#MONEY4');
+				doc.content[k] = doc.content[k].replace(DATE1, '#DATE').replace(DATE2, '#DATE').replace(DATE3, '#DATE').replace(DATE5, '#DATE').replace(DATE4, '#DATE').replace(DATE6, '#DATE').replace(DATE7, '#DATE');
+				doc.content[k] = doc.content[k].replace(MONEY1, '#MONEY').replace(MONEY2, '#MONEY').replace(MONEY3, '#MONEY').replace(MONEY4, '#MONEY');
+				doc.content[k] = doc.content[k].replace(DIST1, '#DIST1').replace(DIST2, '#DIST2');
+				doc.content[k] = doc.content[k].replace(PHONE, '#PHONE');
 			}
+
+			// Replacing interest numbers with TAGS from title
 			doc.title = doc.title.replace(ORD, '#ORD');
-			doc.title = doc.title.replace(DATE1, '#DATE').replace(DATE2, '#DATE').replace(DATE3, '#DATE').replace(DATE5, '#DATE').replace(DATE4, '#DATE').replace(DATE6, '#DATE');
+			doc.title = doc.title.replace(DATE1, '#DATE').replace(DATE2, '#DATE').replace(DATE3, '#DATE').replace(DATE5, '#DATE').replace(DATE4, '#DATE').replace(DATE6, '#DATE').replace(DATE7, '#DATE');
+			doc.title = doc.title.replace(MONEY1, '#MONEY').replace(MONEY2, '#MONEY').replace(MONEY3, '#MONEY').replace(MONEY4, '#MONEY');
+			doc.title = doc.title.replace(DIST1, '#DIST').replace(DIST2, '#DIST');
+			
+			
 
-
-
+			// writing on file
+			// if(isConsistent) {
+			// 	for(var y = 0; y<doc.content.length; y++) {
+			// 		fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT3.txt', doc.trec_id + "\t" + doc.content[y] + "\n", function (err) {
+		 //    			if(err) {
+	  //   	    			return console.log(err + "ERRORE");
+	  //   				}
+	  //   				count++;
+	  //   				console.log("ID: " + doc.trec_id +  "    NUMERO: "  + count);
+			// 		}); 
+			// 	}
+			
+			// }
+			
+			
 			console.log(JSON.stringify(doc) + "\n\n\n");
 
 
@@ -155,9 +233,9 @@ fs.createReadStream('/Users/tiziano/project_giw/ducumenti_motore_ricerca/New02.w
 		}
 
 		catch (err) {
-			console.log(err);
+			console.log(err + "CATCH");
 		}
-
+		isConsistent =  true;
 	});
 
 
