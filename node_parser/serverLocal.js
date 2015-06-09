@@ -181,7 +181,6 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 		    			if(err) {
 	    	    			return console.log(err + "ERRORE");
 	    				}
-	    				count++;
 	    				console.log("ID: " + doc.trec_id +  "    NUMERO: "  + count);
 					}); 
 				}
