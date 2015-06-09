@@ -26,9 +26,9 @@ var DATE6 = /\b(january|february|march|april|june|july|august|september|october|
 
 
 var MONEY1 = /\b.(\$|\€|\¥|\£)([1-9]{1}[0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})?|(\.[0-9]{1,2})?).\b/ig;
-var MONEY2 = /\b.(dollar+s?|euro+s?|yen+s?|pound+s?)([1-9]{1}[0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})?|(\.[0-9]{1,2})?).\b/ig;
+var MONEY2 = /\b.(dollar(s?)|euro(s?)|yen(s?)|pound(s?))([1-9]{1}[0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})?|(\.[0-9]{1,2})?).\b/igm;
 var MONEY3 = /\b.([1-9]{1}[0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})?|(\.[0-9]{1,2}))(\$|\€|\¥|\£).\b/ig;
-var MONEY4 = /\b.([1-9]{1}[0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})?|(\.[0-9]{1,2}))(dollar+s?|euro+s?|yen+s?|pound+s?).\b/ig;
+var MONEY4 = /\b.([1-9]{1}[0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})?|(\.[0-9]{1,2}))(dollar+s?|euro+s?|yen+s?|pound+s?).\b/igm;
 
 
 //PHASE 1 -  CREATE DOCS
@@ -143,6 +143,7 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 			}
 			doc.title = doc.title.replace(ORD, '#ORD');
 			doc.title = doc.title.replace(DATE1, '#DATE').replace(DATE2, '#DATE').replace(DATE3, '#DATE').replace(DATE5, '#DATE').replace(DATE4, '#DATE').replace(DATE6, '#DATE');
+			doc.content[k] = doc.content[k].replace(MONEY1, '#MONEY').replace(MONEY2, '#MONEY').replace(MONEY3, '#MONEY').replace(MONEY4, '#MONEY');
 
 
 
