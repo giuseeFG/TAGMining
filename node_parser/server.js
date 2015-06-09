@@ -11,24 +11,42 @@ var title = '';
 var trec_id = '';
 var html_strip = require('htmlstrip-native');
 var removingList = [];
+var cont = 0;
+fs.writeFile("/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/test.txt", "START", function(err) {
+    		if(err) {
+        		return console.log(err);
+    		}
+
+    		console.log("The file was saved!");
+			}); 
 
 var ORD = /\b\d+th\b|\b\d+st\b|\b\d+nd\b|\b\d+rd\b/igm;
 
 
-var DATE1 = /\b(january|february|march|april|june|july|august|september|october|november|december|jan|feb|marc|apr|may|jun|jul|aug|sep|oct|nov|dec) (0[1-9]|[12][0-9]|3[0-1]), ((1?[0-9]|20)[0-9][0-9])\b/igm;
-var DATE2 = /[1-9]+ ?((b\.c\.)|(a\.?d\.?))/igm
-var DATE3 = /\b(19|20)[0-9][0-9]([-|\.|\/])(0[1-9]|1[012])([-|\.|\/])(0[1-9]|[12][0-9]|3[01])\b/igm;
-var DATE4 = /\b((0[1-9]|[12][0-9]|3[01]))([-|\.|\/])(0[1-9]|1[012])([-|\.|\/])(19|20)[0-9][0-9]\b/igm;
-var DATE5 = /\b(19|20)[0-9][0-9] (january|february|march|april|june|july|august|september|october|november|december|jan|feb|marc|apr|may|jun|jul|aug|sep|oct|nov|dec) ((0[1-9]|[12][0-9]|3[01]))\b/igm;
-var DATE6 = /\b(january|february|march|april|june|july|august|september|october|november|december|jan|feb|marc|apr|may|jun|jul|aug|sep|oct|nov|dec) (#ORD)\b/igm;
+var DATE1 = /\b(january|february|march|april|june|july|august|september|october|november|december|jan|feb|marc|apr|may|jun|jul|aug|sep|oct|nov|dec)\s(0?[1-9]|[12][0-9]|3[0-1])(,\s((1?[0-9]|20)[0-9][0-9]))?\b/igm;
+var DATE2 = /[1-9]+\s?((b\.c\.)|(a\.?d\.?))/igm
+var DATE3 = /\b(19|20)[0-9][0-9]([-|\.|\/|\s])(0[1-9]|1[012])([-|\.|\/|\s])(0?[1-9]|[12][0-9]|3[01])\b/igm;
+var DATE4 = /\b((0?[1-9]|[12][0-9]|3[01]))([-|\.|\/|\s])(0?[1-9]|1[012])([-|\.|\/|\s])(19|20)[0-9][0-9]\b/igm;
+var DATE5 = /\b(19|20)[0-9][0-9]\s(january|february|march|april|june|july|august|september|october|november|december|jan|feb|marc|apr|may|jun|jul|aug|sep|oct|nov|dec)\s((0?[1-9]|[12][0-9]|3[01]))\b/igm;
+var DATE6 = /\b((0?[1-9]|[12][0-9]|3[01]))\s(january|february|march|april|june|july|august|september|october|november|december|jan|feb|marc|apr|may|jun|jul|aug|sep|oct|nov|dec)(\,)?\s(19|20)[0-9][0-9]\b/igm;
+var DATE7 = /\b(january|february|march|april|june|july|august|september|october|november|december|jan|feb|marc|apr|may|jun|jul|aug|sep|oct|nov|dec)\s(#ORD)\b/igm;
 
-// date format: "january 21, 2008", "234 b.c.", "1990-12-18", "19-12-1998", "1990 jan 20", "Feb 1st" 
-
+// date format: "january 21, 2008", "234 b.c.", "1990-12-18", "19-12-1998", "1990 jan 20","12 jan 2008", "Feb 1st" 
 
 var MONEY1 = /\b.(\$|\€|\¥|\£)([1-9]{1}[0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})?|(\.[0-9]{1,2})?).\b/ig;
 var MONEY2 = /\b.(dollar(s?)|euro(s?)|yen(s?)|pound(s?))([1-9]{1}[0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})?|(\.[0-9]{1,2})?).\b/igm;
 var MONEY3 = /\b.([1-9]{1}[0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})?|(\.[0-9]{1,2}))(\$|\€|\¥|\£).\b/ig;
 var MONEY4 = /\b.([1-9]{1}[0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})?|(\.[0-9]{1,2}))(dollar+s?|euro+s?|yen+s?|pound+s?).\b/igm;
+
+
+
+
+
+var DIST1 = /\b((0\.[0-9]+)|([1-9](\,)?(\.)?[0-9]*(\,)?(\.)?[0-9]*(\,)?))\s?(kilometer(s?)|meter(s?)|mile(s?)|centimeter(s?)|millimeter(s?)|foot|feet|yard(s?)|inch((es)?)|km|m|cm|mm|ft|in|yd|mi|nmi|nm|ly)\b/igm;
+var DIST2 = /\b(kilometer(s?)|meter(s?)|mile(s?)|centimeter(s?)|millimeter(s?)|foot|feet|yard(s?)|inch((es)?)|km|m|cm|mm|ft|yd|mi|nmi|nm|ly)(\.)?\s?((0\.[0-9]+)|([1-9](\,)?(\.)?[0-9]*(\,)?(\.)?[0-9]*(\,)?))\b/igm;
+
+// distance format: "0.1 km", "0.2m", "100 kilometers", "65yards", "KM. 121", "100,292.76 ft"
+
 
 
 //PHASE 1 -  CREATE DOCS
@@ -138,16 +156,27 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 			// ORDINAL OK, DATE OK!
 			for (var k = 0; k < doc.content.length; k++) {
 				doc.content[k] = doc.content[k].replace(ORD, '#ORD');
-				doc.content[k] = doc.content[k].replace(DATE1, '#DATE').replace(DATE2, '#DATE').replace(DATE3, '#DATE').replace(DATE5, '#DATE').replace(DATE4, '#DATE').replace(DATE6, '#DATE');
+				doc.content[k] = doc.content[k].replace(DATE1, '#DATE').replace(DATE2, '#DATE').replace(DATE3, '#DATE').replace(DATE5, '#DATE').replace(DATE4, '#DATE').replace(DATE6, '#DATE').replace(DATE7, '#DATE');
 				doc.content[k] = doc.content[k].replace(MONEY1, '#MONEY').replace(MONEY2, '#MONEY').replace(MONEY3, '#MONEY').replace(MONEY4, '#MONEY');
+				doc.content[k] = doc.content[k].replace(DIST1, '#DIST1').replace(DIST2, '#DIST2');
 			}
 			doc.title = doc.title.replace(ORD, '#ORD');
-			doc.title = doc.title.replace(DATE1, '#DATE').replace(DATE2, '#DATE').replace(DATE3, '#DATE').replace(DATE5, '#DATE').replace(DATE4, '#DATE').replace(DATE6, '#DATE');
-			doc.content[k] = doc.content[k].replace(MONEY1, '#MONEY').replace(MONEY2, '#MONEY').replace(MONEY3, '#MONEY').replace(MONEY4, '#MONEY');
+			doc.title = doc.title.replace(DATE1, '#DATE').replace(DATE2, '#DATE').replace(DATE3, '#DATE').replace(DATE5, '#DATE').replace(DATE4, '#DATE').replace(DATE6, '#DATE').replace(DATE7, '#DATE');
+			doc.title = doc.title.replace(MONEY1, '#MONEY').replace(MONEY2, '#MONEY').replace(MONEY3, '#MONEY').replace(MONEY4, '#MONEY');
+			doc.title = doc.title.replace(DIST1, '#DIST1').replace(DIST2, '#DIST2');
+			
 
-
-
-			console.log(JSON.stringify(doc) + "\n\n\n");
+			fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/test.txt', JSON.stringify(doc) + "\n\n\n", function (err) {
+	    		if(err) {
+    	    		return console.log(err + "ERRORE");
+    			}
+    			cont++;
+    			console.log(cont);
+			}); 
+		
+			
+			
+			//console.log(JSON.stringify(doc) + "\n\n\n");
 
 
 			//handle empty
@@ -156,7 +185,7 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 		}
 
 		catch (err) {
-			console.log(err);
+			console.log(err + "CATCH");
 		}
 
 	});
