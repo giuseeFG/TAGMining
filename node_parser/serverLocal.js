@@ -106,6 +106,9 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 			var indexOfBodyBegin = output.content.indexOf("<body>");
 			var indexOfBodyEnd = output.content.indexOf("</body>") + 7;
 
+			var a_tag = /<a(.*?)<\/a>/gmi;
+			output.content = output.content.replace(a_tag, "");
+
 			var doc = {
 				trec_id: output.trec_id_long.substring(output.trec_id_long.length - 5, output.trec_id_long.length),
 				content: output.content.substring(indexOfBodyBegin, indexOfBodyEnd),
@@ -211,7 +214,6 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 		    			if(err) {
 	    	    			return console.log(err + "ERRORE");
 	    				}
-	    				count++;
 	    				console.log("ID: " + doc.trec_id +  "    NUMERO: "  + count);
 					}); 
 				}
