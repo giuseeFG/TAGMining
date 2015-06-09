@@ -139,7 +139,7 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 			for (var k = 0; k < doc.content.length; k++) {
 				doc.content[k] = doc.content[k].replace(ORD, '#ORD');
 				doc.content[k] = doc.content[k].replace(DATE1, '#DATE').replace(DATE2, '#DATE').replace(DATE3, '#DATE').replace(DATE5, '#DATE').replace(DATE4, '#DATE').replace(DATE6, '#DATE');
-				.replace(MONEY1, '#MONEY').replace(MONEY2, '#MONEY').replace(MONEY3, '#MONEY').replace(MONEY4, '#MONEY')
+				doc.content[k] = doc.content[k].replace(MONEY1, '#MONEY').replace(MONEY2, '#MONEY').replace(MONEY3, '#MONEY').replace(MONEY4, '#MONEY');
 			}
 			doc.title = doc.title.replace(ORD, '#ORD');
 			doc.title = doc.title.replace(DATE1, '#DATE').replace(DATE2, '#DATE').replace(DATE3, '#DATE').replace(DATE5, '#DATE').replace(DATE4, '#DATE').replace(DATE6, '#DATE');
