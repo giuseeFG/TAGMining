@@ -55,10 +55,6 @@ var MONEY1 = /(\$|\€|\¥|\£)\s?([1-9][0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]
 var MONEY2 = /(dollar(s?)|euro(s?)|yen(s?)|pound(s?))\s?([1-9][0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})|(\.[0-9]{1,2}))(\smillion(s)?|\sbillion(s)?|\sbn|\smn)?(million(s)?|billion(s)?|bn|mn)?/igm;
 var MONEY3 = /([1-9][0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})|(\.[0-9]{1,2}))\-?(\smillion(s)?|\sbillion(s)?|\sbn|\smn)?(million(s)?|billion(s)?|bn|mn)?(\s?dollar(s?)|\s?euro(s?)|\s?yen(s?)|\?pound(s?))/igm;
 var MONEY4 = /([1-9][0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})|(\.[0-9]{1,2}))\-?(\smillion(s)?|\sbillion(s)?|\sbn|\smn)?(million(s)?|billion(s)?|bn|mn)?(\s?\$|\s?\€|\s?\¥|\s?\£)/igm;
- =
-
-
-
 
 
 var DIST1 = /\b((0\.[0-9]+)|([1-9](\,)?(\.)?[0-9]*(\,)?(\.)?[0-9]*(\,)?))\s?(kilometer(s?)|meter(s?)|mile(s?)|centimeter(s?)|millimeter(s?)|foot|feet|yard(s?)|inch((es)?)|km|m|cm|mm|ft|in|yd|mi|nmi|nm|ly)\b/igm;
@@ -66,12 +62,14 @@ var DIST2 = /\b(kilometer(s?)|meter(s?)|mile(s?)|centimeter(s?)|millimeter(s?)|f
 
 // distance format: "0.1 km", "0.2m", "100 kilometers", "65yards", "KM. 121", "100,292.76 ft"
 
+// verificare i spazi dopo il phone number
+var PHONE = /(1\s*[-\/\.]?)?(\((\d{3})\)|(\d{3}))\s*[-\/\.]?\s*(\d{3})\s*[-\/\.]?\s*(\d{4})\s*(([xX]|[eE][xX][tT])\.?\s*(\d+))*\b/igm;
 
 
 //PHASE 1 -  CREATE DOCS
 //    'C:/Users/Giuseppe/Desktop/TAGMining/TAGMining/new_file.warc'
 //    '/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.warc'
-//    '/Users/tiziano/TAGMining/new_file.warc'
+//    '/Users/tiziano/project_giw/ducumenti_motore_ricerca/New02.warc'
 
 
 fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.warc')
@@ -199,6 +197,8 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 				doc.content[k] = doc.content[k].replace(DATE1, '#DATE').replace(DATE2, '#DATE').replace(DATE3, '#DATE').replace(DATE5, '#DATE').replace(DATE4, '#DATE').replace(DATE6, '#DATE').replace(DATE7, '#DATE');
 				doc.content[k] = doc.content[k].replace(MONEY1, '#MONEY').replace(MONEY2, '#MONEY').replace(MONEY3, '#MONEY').replace(MONEY4, '#MONEY');
 				doc.content[k] = doc.content[k].replace(DIST1, '#DIST1').replace(DIST2, '#DIST2');
+				doc.content[k] = doc.content[k].replace(PHONE, '#PHONE');
+
 			}
 
 			// Replacing interest numbers with TAGS from title
