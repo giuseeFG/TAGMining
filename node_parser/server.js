@@ -63,8 +63,10 @@ var DIST2 = /\b(kilometer(s?)|meter(s?)|mile(s?)|centimeter(s?)|millimeter(s?)|f
 // distance format: "0.1 km", "0.2m", "100 kilometers", "65yards", "KM. 121", "100,292.76 ft"
 
 // verificare i spazi dopo il phone number
-var PHONE = /(1\s*[-\/\.]?)?(\((\d{3})\)|(\d{3}))\s*[-\/\.]?\s*(\d{3})\s*[-\/\.]?\s*(\d{4})\s*(([xX]|[eE][xX][tT])\.?\s*(\d+))*\b/igm;
+var PHONE = /(\(\+\d\d?\d?\)\s)?(1\s*[-\/\.]?)?(\((\d{3})\)|(\d{3}))\s*[-\/\.]?\s*(\d{3})\s*[-\/\.]?\s*(\d{4})\s*(([xX]|[eE][xX][tT])\.?\s*(\d+))*/igm;
 
+
+var TIME = /(1[\d]|[1-9]|00|2[0|1|2|3|4]|0[\d])(:|(\s)?h(\s)?)[0-5][0-9](:|(\s)?m(\s)?)([0-5][0-9](\s)?s?)?((\s)?am|(\s)?pm)?\b/
 
 //PHASE 1 -  CREATE DOCS
 //    'C:/Users/Giuseppe/Desktop/TAGMining/TAGMining/new_file.warc'
@@ -197,8 +199,8 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 				doc.content[k] = doc.content[k].replace(DATE1, '#DATE').replace(DATE2, '#DATE').replace(DATE3, '#DATE').replace(DATE5, '#DATE').replace(DATE4, '#DATE').replace(DATE6, '#DATE').replace(DATE7, '#DATE');
 				doc.content[k] = doc.content[k].replace(MONEY1, '#MONEY').replace(MONEY2, '#MONEY').replace(MONEY3, '#MONEY').replace(MONEY4, '#MONEY');
 				doc.content[k] = doc.content[k].replace(DIST1, '#DIST1').replace(DIST2, '#DIST2');
-				doc.content[k] = doc.content[k].replace(PHONE, '#PHONE');
-
+				doc.content[k] = doc.content[k].replace(PHONE, ' #PHONE ');
+				doc.content[k] = doc.content[k].replace(TIME, '#TIME ');
 			}
 
 			// Replacing interest numbers with TAGS from title

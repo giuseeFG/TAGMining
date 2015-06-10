@@ -57,15 +57,15 @@ var MONEY3 = /([1-9][0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]
 var MONEY4 = /([1-9][0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})|(\.[0-9]{1,2}))\-?(\smillion(s)?|\sbillion(s)?|\sbn|\smn)?(million(s)?|billion(s)?|bn|mn)?(\s?\$|\s?\€|\s?\¥|\s?\£)/igm;
 
 
-
 var DIST1 = /\b((0\.[0-9]+)|([1-9](\,)?(\.)?[0-9]*(\,)?(\.)?[0-9]*(\,)?))\s?(kilometer(s?)|meter(s?)|mile(s?)|centimeter(s?)|millimeter(s?)|foot|feet|yard(s?)|inch((es)?)|km|m|cm|mm|ft|in|yd|mi|nmi|nm|ly)\b/igm;
 var DIST2 = /\b(kilometer(s?)|meter(s?)|mile(s?)|centimeter(s?)|millimeter(s?)|foot|feet|yard(s?)|inch((es)?)|km|m|cm|mm|ft|yd|mi|nmi|nm|ly)(\.)?\s?((0\.[0-9]+)|([1-9](\,)?(\.)?[0-9]*(\,)?(\.)?[0-9]*(\,)?))\b/igm;
 
 // distance format: "0.1 km", "0.2m", "100 kilometers", "65yards", "KM. 121", "100,292.76 ft"
 
-var PHONE = /(1\s*[-\/\.]?)?(\((\d{3})\)|(\d{3}))\s*[-\/\.]?\s*(\d{3})\s*[-\/\.]?\s*(\d{4})\s*(([xX]|[eE][xX][tT])\.?\s*(\d+))*\b/igm;
+var PHONE = /(\(\+\d\d?\d?\)\s)?(1\s*[-\/\.]?)?(\((\d{3})\)|(\d{3}))\s*[-\/\.]?\s*(\d{3})\s*[-\/\.]?\s*(\d{4})\s*(([xX]|[eE][xX][tT])\.?\s*(\d+))*/igm;
 
 
+var TIME = /(1[\d]|[1-9]|00|2[0|1|2|3|4]|0[\d])(:|(\s)?h(\s)?)[0-5][0-9](:|(\s)?m(\s)?)([0-5][0-9](\s)?s?)?((\s)?am|(\s)?pm)?\b/
 
 //PHASE 1 -  CREATE DOCS
 //    'C:/Users/Giuseppe/Desktop/TAGMining/TAGMining/new_file.warc'
@@ -174,14 +174,14 @@ fs.createReadStream('/Users/tiziano/project_giw/ducumenti_motore_ricerca/New02.w
 			var isConsistent = true;
 
 			// writing on file
-			// for(var x = 0; x<removingList.length;x++) {
-			// 	if(doc.trec_id === removingList[x]) {
-			// 		isConsistent = false;
-			// 	}
-			// }
-			// // if(isConsistent) {
-			// // 	for(var y = 0; y<doc.content.length; y++) {
-			// // 		fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT2.txt', doc.trec_id + "\t" + doc.content[y] + "\n", function (err) {
+			for(var x = 0; x<removingList.length;x++) {
+				if(doc.trec_id === removingList[x]) {
+					isConsistent = false;
+				}
+			}
+			// if(isConsistent) {
+			// 	for(var y = 0; y<doc.content.length; y++) {
+			// 		fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT2.txt', doc.trec_id + "\t" + doc.content[y] + "\n", function (err) {
 		 //    			if(err) {
 	  //   	    			return console.log(err + "ERRORE");
 	  //   				}
@@ -198,7 +198,10 @@ fs.createReadStream('/Users/tiziano/project_giw/ducumenti_motore_ricerca/New02.w
 				doc.content[k] = doc.content[k].replace(DATE1, '#DATE').replace(DATE2, '#DATE').replace(DATE3, '#DATE').replace(DATE5, '#DATE').replace(DATE4, '#DATE').replace(DATE6, '#DATE').replace(DATE7, '#DATE');
 				doc.content[k] = doc.content[k].replace(MONEY1, '#MONEY').replace(MONEY2, '#MONEY').replace(MONEY3, '#MONEY').replace(MONEY4, '#MONEY');
 				doc.content[k] = doc.content[k].replace(DIST1, '#DIST1').replace(DIST2, '#DIST2');
-				doc.content[k] = doc.content[k].replace(PHONE, '#PHONE');
+				doc.content[k] = doc.content[k].replace(PHONE, ' #PHONE ');
+				doc.content[k] = doc.content[k].replace(TIME, '#TIME ');
+
+
 			}
 
 			// Replacing interest numbers with TAGS from title
@@ -209,7 +212,7 @@ fs.createReadStream('/Users/tiziano/project_giw/ducumenti_motore_ricerca/New02.w
 			
 			
 
-			// writing on file
+			// // writing on file
 			// if(isConsistent) {
 			// 	for(var y = 0; y<doc.content.length; y++) {
 			// 		fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT3.txt', doc.trec_id + "\t" + doc.content[y] + "\n", function (err) {
