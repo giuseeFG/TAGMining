@@ -14,8 +14,20 @@ var removingList = [];
 var count = 0;
 
 
+
+
+//Create output file 1
+fs.writeFile("/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT1.txt", "trec_id\t\tString\t\tTag\n" , function(err) {
+ 	if(err) {
+        return console.log(err);
+   	}
+   	console.log("The file was saved!");
+}); 
+
+
+
 //Create output file 2
-fs.writeFile("/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT2.txt", "OUTPUT 2\n", function(err) {
+fs.writeFile("/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT2.txt", "trec_id\t\tOld_String\n", function(err) {
  	if(err) {
         return console.log(err);
    	}
@@ -25,16 +37,12 @@ fs.writeFile("/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT2.t
 
 
 //Create output file 3
-fs.writeFile("/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT3.txt", "OUTPUT 3\n", function(err) {
+fs.writeFile("/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT3.txt", "trec_id\t\tNewString\n", function(err) {
  	if(err) {
         return console.log(err);
    	}
    	console.log("The file was saved!");
 }); 
-
-
-
-
 
 
 
@@ -57,7 +65,7 @@ var MONEY3 = /([1-9][0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]
 var MONEY4 = /([1-9][0-9]+(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})|(\.[0-9]{1,2}))\-?(\smillion(s)?|\sbillion(s)?|\sbn|\smn)?(million(s)?|billion(s)?|bn|mn)?(\s?\$|\s?\€|\s?\¥|\s?\£)/igm;
 
 
-var DIST1 = /\b((0\.[0-9]+)|([1-9](\,)?(\.)?[0-9]*(\,)?(\.)?[0-9]*(\,)?))\s?(kilometer(s?)|meter(s?)|mile(s?)|centimeter(s?)|millimeter(s?)|foot|feet|yard(s?)|inch((es)?)|km|m|cm|mm|ft|in|yd|mi|nmi|nm|ly)\b/igm;
+var DIST1 = /\b((0\.[0-9]+)|([1-9](\,)?(\.)?[0-9]*(\,)?(\.)?[0-9]*(\,)?))\s?(kilometer(s?)|meter(s?)|mile(s?)|centimeter(s?)|millimeter(s?)|foot|feet|yard(s?)|inch((es)?)|km|m|cm|mm|ft|yd|mi|nmi|nm|ly)\b/igm;
 var DIST2 = /\b(kilometer(s?)|meter(s?)|mile(s?)|centimeter(s?)|millimeter(s?)|foot|feet|yard(s?)|inch((es)?)|km|m|cm|mm|ft|yd|mi|nmi|nm|ly)(\.)?\s?((0\.[0-9]+)|([1-9](\,)?(\.)?[0-9]*(\,)?(\.)?[0-9]*(\,)?))\b/igm;
 
 // distance format: "0.1 km", "0.2m", "100 kilometers", "65yards", "KM. 121", "100,292.76 ft"
@@ -180,18 +188,168 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 					isConsistent = false;
 				}
 			}
+
+
+			// FILLING FIRST OUTPUT
+			for (var z = 0; z < doc.content.length; z++) {
+				if(doc.content[z].search(ORD) !== -1) {
+					var matchORD = doc.content[z].match(ORD);
+					fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT1.txt', doc.trec_id + "\t\t" + matchORD + "\t\t" + '#ORD' + "\n", function (err) {
+		    			if(err) {
+	    	    			return console.log(err + "ERRORE");
+	    				}
+	    				
+	    			}); 
+				}
+				if(doc.content[z].search(DATE1) !== -1) {
+					var matchDATE = doc.content[z].match(DATE1);
+					fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT1.txt', doc.trec_id + "\t\t" + matchDATE + "\t\t" + '#DATE' + "\n", function (err) {
+		    			if(err) {
+	    	    			return console.log(err + "ERRORE");
+	    				}
+	    				
+	    			}); 
+				}
+				if(doc.content[z].search(DATE2) !== -1) {
+					var matchDATE = doc.content[z].match(DATE2);
+					fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT1.txt', doc.trec_id + "\t\t" + matchDATE + "\t\t" + '#DATE' + "\n", function (err) {
+		    			if(err) {
+	    	    			return console.log(err + "ERRORE");
+	    				}
+	    				
+	    			}); 
+				}
+				if(doc.content[z].search(DATE3) !== -1) {
+					var matchDATE = doc.content[z].match(DATE3);
+					fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT1.txt', doc.trec_id + "\t\t" + matchDATE + "\t\t" + '#DATE' + "\n", function (err) {
+		    			if(err) {
+	    	    			return console.log(err + "ERRORE");
+	    				}
+	    				
+	    			}); 
+				}
+				if(doc.content[z].search(DATE4) !== -1) {
+					var matchDATE = doc.content[z].match(DATE4);
+					fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT1.txt', doc.trec_id + "\t\t" + matchDATE + "\t\t" + '#DATE' + "\n", function (err) {
+		    			if(err) {
+	    	    			return console.log(err + "ERRORE");
+	    				}
+	    				
+	    			}); 
+				}
+				if(doc.content[z].search(DATE5) !== -1) {
+					var matchDATE = doc.content[z].match(DATE5);
+					fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT1.txt', doc.trec_id + "\t\t" + matchDATE + "\t\t" + '#DATE' + "\n", function (err) {
+		    			if(err) {
+	    	    			return console.log(err + "ERRORE");
+	    				}
+	    				
+	    			}); 
+				}
+				if(doc.content[z].search(DATE6) !== -1) {
+					var matchDATE = doc.content[z].match(DATE6);
+					fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT1.txt', doc.trec_id + "\t\t" + matchDATE + "\t\t" + '#DATE' + "\n", function (err) {
+		    			if(err) {
+	    	    			return console.log(err + "ERRORE");
+	    				}
+	    				
+	    			}); 
+				}
+				if(doc.content[z].search(DATE7) !== -1) {
+					var matchDATE = doc.content[z].match(DATE7);
+					fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT1.txt', doc.trec_id + "\t\t" + matchDATE + "\t\t" + '#DATE' + "\n", function (err) {
+		    			if(err) {
+	    	    			return console.log(err + "ERRORE");
+	    				}
+	    				
+	    			}); 
+				}
+				if(doc.content[z].search(MONEY1) !== -1) {
+					var matchMONEY = doc.content[z].match(MONEY1);
+					fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT1.txt', doc.trec_id + "\t\t" + matchMONEY + "\t\t" + '#MONEY' + "\n", function (err) {
+		    			if(err) {
+	    	    			return console.log(err + "ERRORE");
+	    				}
+	    				
+	    			}); 
+				}
+				if(doc.content[z].search(MONEY2) !== -1) {
+					var matchMONEY = doc.content[z].match(MONEY2);
+					fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT1.txt', doc.trec_id + "\t\t" + matchMONEY + "\t\t" + '#MONEY' + "\n", function (err) {
+		    			if(err) {
+	    	    			return console.log(err + "ERRORE");
+	    				}
+	    				
+	    			}); 
+				}				
+				if(doc.content[z].search(MONEY3) !== -1) {
+					var matchMONEY = doc.content[z].match(MONEY3);
+					fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT1.txt', doc.trec_id + "\t\t" + matchMONEY + "\t\t" + '#MONEY' + "\n", function (err) {
+		    			if(err) {
+	    	    			return console.log(err + "ERRORE");
+	    				}
+	    				
+	    			}); 
+				}				
+				if(doc.content[z].search(MONEY4) !== -1) {
+					var matchMONEY = doc.content[z].match(MONEY4);
+					fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT1.txt', doc.trec_id + "\t\t" + matchMONEY + "\t\t" + '#MONEY' + "\n", function (err) {
+		    			if(err) {
+	    	    			return console.log(err + "ERRORE");
+	    				}
+	    				
+	    			}); 
+				}				
+				if(doc.content[z].search(DIST1) !== -1) {
+					var matchDIST = doc.content[z].match(DIST1);
+					fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT1.txt', doc.trec_id + "\t\t" + matchDIST + "\t\t" + '#DIST' + "\n", function (err) {
+		    			if(err) {
+	    	    			return console.log(err + "ERRORE");
+	    				}
+	    				
+	    			}); 
+				}
+				if(doc.content[z].search(DIST2) !== -1) {
+					var matchDIST = doc.content[z].match(DIST2);
+					fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT1.txt', doc.trec_id + "\t\t" + matchDIST + "\t\t" + '#DIST' + "\n", function (err) {
+		    			if(err) {
+	    	    			return console.log(err + "ERRORE");
+	    				}
+	    				
+	    			}); 
+				}
+				if(doc.content[z].search(PHONE) !== -1) {
+					var matchPHONE = doc.content[z].match(PHONE);
+					fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT1.txt', doc.trec_id + "\t\t" + matchPHONE+ "\t\t" + '#PHONE' + "\n", function (err) {
+		    			if(err) {
+	    	    			return console.log(err + "ERRORE");
+	    				}
+	    				
+	    			}); 
+				}		
+				if(doc.content[z].search(TIME) !== -1) {
+					var matchTIME = doc.content[z].match(TIME);
+					fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT1.txt', doc.trec_id + "\t\t" + matchTIME+ "\t\t" + '#TIME' + "\n", function (err) {
+		    			if(err) {
+	    	    			return console.log(err + "ERRORE");
+	    				}
+	    				
+	    			}); 
+				}
+			}
+
+			// FILLING SECOND OUTPUT
 			if(isConsistent) {
 				for(var y = 0; y<doc.content.length; y++) {
 					fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT2.txt', doc.trec_id + "\t" + doc.content[y] + "\n", function (err) {
 		    			if(err) {
 	    	    			return console.log(err + "ERRORE");
 	    				}
-	    				console.log("ID: " + doc.trec_id +  "    NUMERO: "  + count);
+	    				
 					}); 
 				}
 			
 			}
-
 
 			// Replacing interest numbers with TAGS from body
 			for (var k = 0; k < doc.content.length; k++) {
@@ -211,31 +369,27 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 			
 			
 
-			// writing on file
+			// FILLING THIRD OUTPUT
 			if(isConsistent) {
 				for(var y = 0; y<doc.content.length; y++) {
 					fs.appendFile('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT3.txt', doc.trec_id + "\t" + doc.content[y] + "\n", function (err) {
 		    			if(err) {
 	    	    			return console.log(err + "ERRORE");
 	    				}
-	    				count++;
-	    				console.log("ID: " + doc.trec_id +  "    NUMERO: "  + count);
 					}); 
 				}
 			
 			}
 			
 			
-			//console.log(JSON.stringify(doc) + "\n\n\n");
+			console.log(count++);
 
 
-			//handle empty
-			//.... TODO
 			
 		}
 
 		catch (err) {
-			console.log(err + "CATCH");
+			console.log(err + "  CATCH");
 		}
 		isConsistent =  true;
 	});
