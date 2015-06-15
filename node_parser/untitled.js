@@ -11,14 +11,14 @@ var title = '';
 var trec_id = '';
 var removingList = [];
 
-var wstream_out1 = fs.createWriteStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT1.txt');
+var wstream_out1 = fs.createWriteStream('/Users/tiziano/TAGMining/OUT1.txt');
 wstream_out1.write('trec_id\t\tString\t\tTag\n');
 
 
-var wstream_out2 = fs.createWriteStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT2.txt');
+var wstream_out2 = fs.createWriteStream('/Users/tiziano/TAGMining/OUT2.txt');
 wstream_out2.write('trec_id\tOld_String\n');
 
-var wstream_out3 = fs.createWriteStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT3.txt');
+var wstream_out3 = fs.createWriteStream('/Users/tiziano/TAGMining/OUT3.txt');
 wstream_out3.write('trec_id\tNew_String\n');
 
 
@@ -55,7 +55,7 @@ var TIME = /(1[\d]|[1-9]|00|2[0|1|2|3|4]|0[\d])(:|(\s)?h(\s)?)[0-5][0-9](:|(\s)?
 
 // time format: "12:34:00", "01:09:00", "20:00:00", "12h34m30s", "20h40m00s", "12:00:00pm", "12:00:00am"
 
-var EMAIL = /((?:(?:(?:[a-zA-Z0-9][\.\-\+_]?)*)[a-zA-Z0-9])+)\@((?:(?:(?:[a-zA-Z0-9][\.\-_]?){0,62})[a-zA-Z0-9])+)\.([a-zA-Z0-9]{2,6})/igm;
+var EMAIL = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b/igm;
 
 // email format: "foo@bar.com", "foo+bar@foo_bar.gh", "abc5678@d666ef.com"
 
@@ -70,7 +70,7 @@ var URL = /((http|ftp|https):\/{2})?(([0-9a-z_-]+\.)(aero|asia|biz|cat|com|coop|
 //    '/Users/tiziano/project_giw/ducumenti_motore_ricerca/New02.warc'
 
 
-fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.warc')
+fs.createReadStream('/Users/tiziano/project_giw/ducumenti_motore_ricerca/New02.warc')
 	.pipe(w)
 	.on('data', function(data) {
 		if (data.headers["WARC-Type"] === "response") {
@@ -237,6 +237,11 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 					wstream_out1.write(doc.trec_id + "\t\t" + matchURL + "\t\t" + '#URL' + "\n");
 
 				}
+				if(doc.content[z].search(EMAIL) !== -1) {
+					var matchEMAIL = doc.content[z].match(EMAIL);
+					wstream_out1.write(doc.trec_id + "\t\t" + matchEMAIL + "\t\t" + '#EMAIL' + "\n");
+
+				}
 			}
 
 
@@ -257,6 +262,7 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 				doc.content[k] = doc.content[k].replace(PHONE, ' #PHONE ');
 				doc.content[k] = doc.content[k].replace(TIME, '#TIME ');
 				doc.content[k] = doc.content[k].replace(URL, '#URL');
+				doc.content[k] = doc.content[k].replace(EMAIL, '#EMAIL');
 
 			}
 			
