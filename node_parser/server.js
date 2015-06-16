@@ -55,7 +55,7 @@ var TIME = /(1[\d]|[1-9]|00|2[0|1|2|3|4]|0[\d])(:|(\s)?h(\s)?)[0-5][0-9](:|(\s)?
 
 // time format: "12:34:00", "01:09:00", "20:00:00", "12h34m30s", "20h40m00s", "12:00:00pm", "12:00:00am"
 
-var EMAIL = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b/igm;
+var EMAIL = /((?:(?:(?:[a-zA-Z0-9][\.\-\+_]?)*)[a-zA-Z0-9])+)\@((?:(?:(?:[a-zA-Z0-9][\.\-_]?){0,62})[a-zA-Z0-9])+)\.([a-zA-Z0-9]{2,6})/igm;
 
 // email format: "foo@bar.com", "foo+bar@foo_bar.gh", "abc5678@d666ef.com"
 
@@ -237,12 +237,6 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 					wstream_out1.write(doc.trec_id + "\t\t" + matchURL + "\t\t" + '#URL' + "\n");
 
 				}
-
-				if(doc.content[z].search(EMAIL) !== -1) {
-					var matchEMAIL = doc.content[z].match(EMAIL);
-					wstream_out1.write(doc.trec_id + "\t\t" + matchEMAIL + "\t\t" + '#EMAIL' + "\n");
-
-				}
 			}
 
 
@@ -263,8 +257,6 @@ fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/00new.war
 				doc.content[k] = doc.content[k].replace(PHONE, ' #PHONE ');
 				doc.content[k] = doc.content[k].replace(TIME, '#TIME ');
 				doc.content[k] = doc.content[k].replace(URL, '#URL');
-				doc.content[k] = doc.content[k].replace(EMAIL, '#EMAIL');
-
 
 			}
 			

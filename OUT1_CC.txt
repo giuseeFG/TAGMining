@@ -1,0 +1,921 @@
+record_id		String		Tag
+e31f7a64-1a39-4e8f-81f1-0ab18efb775f		youtube.com		#URL
+e31f7a64-1a39-4e8f-81f1-0ab18efb775f		youtube.com		#URL
+e31f7a64-1a39-4e8f-81f1-0ab18efb775f		youtube.com		#URL
+1dc8ba49-d9a9-4f42-a4df-9d6d1c3477b5		123-reg.co		#URL
+1dc8ba49-d9a9-4f42-a4df-9d6d1c3477b5		co.uk		#URL
+1dc8ba49-d9a9-4f42-a4df-9d6d1c3477b5		co.uk		#URL
+1dc8ba49-d9a9-4f42-a4df-9d6d1c3477b5		co.uk		#URL
+1dc8ba49-d9a9-4f42-a4df-9d6d1c3477b5		123-reg.co		#URL
+1dc8ba49-d9a9-4f42-a4df-9d6d1c3477b5		co.uk		#URL
+1dc8ba49-d9a9-4f42-a4df-9d6d1c3477b5		co.uk		#URL
+1dc8ba49-d9a9-4f42-a4df-9d6d1c3477b5		co.uk		#URL
+1dc8ba49-d9a9-4f42-a4df-9d6d1c3477b5		123-reg.co		#URL
+1dc8ba49-d9a9-4f42-a4df-9d6d1c3477b5		co.uk		#URL
+1dc8ba49-d9a9-4f42-a4df-9d6d1c3477b5		co.uk		#URL
+1dc8ba49-d9a9-4f42-a4df-9d6d1c3477b5		co.uk		#URL
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		20 Aug 2014		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		04:51:22 		#TIME
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		automattic.com		#URL
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		http://17andbaking.com,xmlrpc.ph		#URL
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 24, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 24, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 24, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 24, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 24, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 24, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 25, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 25, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 25, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 25, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 26, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 26, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 26, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 26, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 27, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 27, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 27, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 27, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 27, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 27, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 27, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 28, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 29, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 30, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 30, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		February 1, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		February 1, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		February 2, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		February 15, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		February 16, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		August 20, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		August 26, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		December 25, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		April 5, 2011		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		April 28, 2011		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		October 12, 2011		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		November 3, 2011		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		March 1, 2012		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		February 28, 2013		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		March 22, 2014		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		March 30, 2014		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		May 13, 2014		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		July 14, 2014		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		WordPress.com		#URL
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		20 Aug 2014		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		04:51:22 		#TIME
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		automattic.com		#URL
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		http://17andbaking.com,xmlrpc.ph		#URL
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 24, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 24, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 24, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 24, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 24, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 24, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 25, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 25, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 25, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 25, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 26, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 26, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 26, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 26, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 27, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 27, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 27, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 27, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 27, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 27, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 27, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 28, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 29, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 30, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 30, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		February 1, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		February 1, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		February 2, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		February 15, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		February 16, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		August 20, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		August 26, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		December 25, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		April 5, 2011		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		April 28, 2011		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		October 12, 2011		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		November 3, 2011		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		March 1, 2012		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		February 28, 2013		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		March 22, 2014		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		March 30, 2014		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		May 13, 2014		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		July 14, 2014		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		WordPress.com		#URL
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		20 Aug 2014		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		04:51:22 		#TIME
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		automattic.com		#URL
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		http://17andbaking.com,xmlrpc.ph		#URL
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 24, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 24, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 24, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 24, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 24, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 24, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 25, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 25, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 25, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 25, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 26, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 26, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 26, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 26, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 27, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 27, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 27, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 27, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 27, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 27, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 27, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 28, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 29, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 30, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		January 30, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		February 1, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		February 1, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		February 2, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		February 15, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		February 16, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		August 20, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		August 26, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		December 25, 2010		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		April 5, 2011		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		April 28, 2011		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		October 12, 2011		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		November 3, 2011		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		March 1, 2012		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		February 28, 2013		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		March 22, 2014		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		March 30, 2014		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		May 13, 2014		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		July 14, 2014		#DATE
+26a2c89f-ba52-442d-8f78-6be30cfb82e1		WordPress.com		#URL
+7571fa09-5ca5-4287-b679-0e47f4447699		August 19, 2014		#DATE
+7571fa09-5ca5-4287-b679-0e47f4447699		9:50:00 pm		#TIME
+7571fa09-5ca5-4287-b679-0e47f4447699		08/01/2013		#DATE
+7571fa09-5ca5-4287-b679-0e47f4447699		http://1828.ms,haffer.com,monte.sh,gmail.com		#URL
+7571fa09-5ca5-4287-b679-0e47f4447699		August 19, 2014		#DATE
+7571fa09-5ca5-4287-b679-0e47f4447699		1828.ms,haffer.com		#URL
+7571fa09-5ca5-4287-b679-0e47f4447699		1828.ms,haffer.com		#URL
+7571fa09-5ca5-4287-b679-0e47f4447699		7th		#ORD
+7571fa09-5ca5-4287-b679-0e47f4447699		August 19, 2014		#DATE
+7571fa09-5ca5-4287-b679-0e47f4447699		9:50:00 pm		#TIME
+7571fa09-5ca5-4287-b679-0e47f4447699		08/01/2013		#DATE
+7571fa09-5ca5-4287-b679-0e47f4447699		http://1828.ms,haffer.com,monte.sh,gmail.com		#URL
+7571fa09-5ca5-4287-b679-0e47f4447699		August 19, 2014		#DATE
+7571fa09-5ca5-4287-b679-0e47f4447699		1828.ms,haffer.com		#URL
+7571fa09-5ca5-4287-b679-0e47f4447699		1828.ms,haffer.com		#URL
+7571fa09-5ca5-4287-b679-0e47f4447699		7th		#ORD
+7571fa09-5ca5-4287-b679-0e47f4447699		August 19, 2014		#DATE
+7571fa09-5ca5-4287-b679-0e47f4447699		9:50:00 pm		#TIME
+7571fa09-5ca5-4287-b679-0e47f4447699		08/01/2013		#DATE
+7571fa09-5ca5-4287-b679-0e47f4447699		http://1828.ms,haffer.com,monte.sh,gmail.com		#URL
+7571fa09-5ca5-4287-b679-0e47f4447699		August 19, 2014		#DATE
+7571fa09-5ca5-4287-b679-0e47f4447699		1828.ms,haffer.com		#URL
+7571fa09-5ca5-4287-b679-0e47f4447699		1828.ms,haffer.com		#URL
+7571fa09-5ca5-4287-b679-0e47f4447699		7th		#ORD
+85ca7634-5e04-4cd1-bff3-09feb722f6aa		$5.00,$10.00,$20.00		#MONEY
+85ca7634-5e04-4cd1-bff3-09feb722f6aa		OneBoyUso.com		#URL
+85ca7634-5e04-4cd1-bff3-09feb722f6aa		$5.00,$10.00,$20.00		#MONEY
+85ca7634-5e04-4cd1-bff3-09feb722f6aa		OneBoyUso.com		#URL
+85ca7634-5e04-4cd1-bff3-09feb722f6aa		$5.00,$10.00,$20.00		#MONEY
+85ca7634-5e04-4cd1-bff3-09feb722f6aa		OneBoyUso.com		#URL
+73753419-2d53-410a-a051-b1b1f26c6b65		Peazer.Al		#URL
+73753419-2d53-410a-a051-b1b1f26c6b65		$355		#MONEY
+73753419-2d53-410a-a051-b1b1f26c6b65		Peazer.Al		#URL
+73753419-2d53-410a-a051-b1b1f26c6b65		$355		#MONEY
+73753419-2d53-410a-a051-b1b1f26c6b65		Peazer.Al		#URL
+73753419-2d53-410a-a051-b1b1f26c6b65		$355		#MONEY
+194ae3f3-badd-4338-b95e-67d0537676a6		20 Aug 2014		#DATE
+194ae3f3-badd-4338-b95e-67d0537676a6		04:52:14 		#TIME
+194ae3f3-badd-4338-b95e-67d0537676a6		20 Aug 2014		#DATE
+194ae3f3-badd-4338-b95e-67d0537676a6		04:52:14 		#TIME
+194ae3f3-badd-4338-b95e-67d0537676a6		20 Aug 2014		#DATE
+194ae3f3-badd-4338-b95e-67d0537676a6		04:52:14 		#TIME
+a1b63fb6-cd72-4ba7-9c99-46c02c1ef791		20 Aug 2014		#DATE
+a1b63fb6-cd72-4ba7-9c99-46c02c1ef791		04:55:01 		#TIME
+a1b63fb6-cd72-4ba7-9c99-46c02c1ef791		20 Aug 2014		#DATE
+a1b63fb6-cd72-4ba7-9c99-46c02c1ef791		04:55:01 		#TIME
+a1b63fb6-cd72-4ba7-9c99-46c02c1ef791		20 Aug 2014		#DATE
+a1b63fb6-cd72-4ba7-9c99-46c02c1ef791		04:55:01 		#TIME
+ccaa8ff7-bd98-4392-aec6-101d8980ad1c		August 25, 2008		#DATE
+ccaa8ff7-bd98-4392-aec6-101d8980ad1c		August 25, 2008		#DATE
+ccaa8ff7-bd98-4392-aec6-101d8980ad1c		August 25, 2008		#DATE
+8be973d1-af6b-410b-8347-87e4506a25b4		goldencross.com		#URL
+8be973d1-af6b-410b-8347-87e4506a25b4		goldencross.com		#URL
+8be973d1-af6b-410b-8347-87e4506a25b4		goldencross.com		#URL
+b51b247b-e162-4e3b-bf65-355b82958829		20 Aug 2014		#DATE
+b51b247b-e162-4e3b-bf65-355b82958829		04:50:35 		#TIME
+b51b247b-e162-4e3b-bf65-355b82958829		ASP.NET		#URL
+b51b247b-e162-4e3b-bf65-355b82958829		20 Aug 2014		#DATE
+b51b247b-e162-4e3b-bf65-355b82958829		04:50:35 		#TIME
+b51b247b-e162-4e3b-bf65-355b82958829		ASP.NET		#URL
+b51b247b-e162-4e3b-bf65-355b82958829		20 Aug 2014		#DATE
+b51b247b-e162-4e3b-bf65-355b82958829		04:50:35 		#TIME
+b51b247b-e162-4e3b-bf65-355b82958829		ASP.NET		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		dego.Se		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		usn.Se		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		klimatyzacji.Se		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		spawamy.Na		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		arek.Cz		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		upal.Do		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		ywanych.Au		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		napraw.Za		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		klimatyzacja.Re		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		w.Re		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		arki.Se		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		2010-07-02		#DATE
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		dego.Se		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		usn.Se		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		klimatyzacji.Se		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		spawamy.Na		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		arek.Cz		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		upal.Do		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		ywanych.Au		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		napraw.Za		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		klimatyzacja.Re		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		w.Re		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		arki.Se		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		2010-07-02		#DATE
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		dego.Se		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		usn.Se		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		klimatyzacji.Se		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		spawamy.Na		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		arek.Cz		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		upal.Do		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		ywanych.Au		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		napraw.Za		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		klimatyzacja.Re		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		w.Re		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		arki.Se		#URL
+0c39b177-35b9-4e7c-94ba-5e13db1e0be4		2010-07-02		#DATE
+39f289cc-2d01-44e7-a6f4-4f964474981c		December 6, 2010		#DATE
+39f289cc-2d01-44e7-a6f4-4f964474981c		Aug 18, 2014		#DATE
+39f289cc-2d01-44e7-a6f4-4f964474981c		Aug 18, 2014		#DATE
+39f289cc-2d01-44e7-a6f4-4f964474981c		evening.Be		#URL
+39f289cc-2d01-44e7-a6f4-4f964474981c		Aug 18, 2014		#DATE
+39f289cc-2d01-44e7-a6f4-4f964474981c		Aug 18, 2014		#DATE
+39f289cc-2d01-44e7-a6f4-4f964474981c		Sta.sh		#URL
+39f289cc-2d01-44e7-a6f4-4f964474981c		December 6, 2010		#DATE
+39f289cc-2d01-44e7-a6f4-4f964474981c		Aug 18, 2014		#DATE
+39f289cc-2d01-44e7-a6f4-4f964474981c		Aug 18, 2014		#DATE
+39f289cc-2d01-44e7-a6f4-4f964474981c		evening.Be		#URL
+39f289cc-2d01-44e7-a6f4-4f964474981c		Aug 18, 2014		#DATE
+39f289cc-2d01-44e7-a6f4-4f964474981c		Aug 18, 2014		#DATE
+39f289cc-2d01-44e7-a6f4-4f964474981c		Sta.sh		#URL
+39f289cc-2d01-44e7-a6f4-4f964474981c		December 6, 2010		#DATE
+39f289cc-2d01-44e7-a6f4-4f964474981c		Aug 18, 2014		#DATE
+39f289cc-2d01-44e7-a6f4-4f964474981c		Aug 18, 2014		#DATE
+39f289cc-2d01-44e7-a6f4-4f964474981c		evening.Be		#URL
+39f289cc-2d01-44e7-a6f4-4f964474981c		Aug 18, 2014		#DATE
+39f289cc-2d01-44e7-a6f4-4f964474981c		Aug 18, 2014		#DATE
+39f289cc-2d01-44e7-a6f4-4f964474981c		Sta.sh		#URL
+e4ef3c4b-ae92-4b51-8793-0da8f6010c7d		ustalone.Za		#URL
+e4ef3c4b-ae92-4b51-8793-0da8f6010c7d		nie.Al		#URL
+e4ef3c4b-ae92-4b51-8793-0da8f6010c7d		2010-01-17		#DATE
+e4ef3c4b-ae92-4b51-8793-0da8f6010c7d		w.Na		#URL
+e4ef3c4b-ae92-4b51-8793-0da8f6010c7d		prac.Je		#URL
+e4ef3c4b-ae92-4b51-8793-0da8f6010c7d		J.Pr		#URL
+e4ef3c4b-ae92-4b51-8793-0da8f6010c7d		ustalone.Za		#URL
+e4ef3c4b-ae92-4b51-8793-0da8f6010c7d		nie.Al		#URL
+e4ef3c4b-ae92-4b51-8793-0da8f6010c7d		2010-01-17		#DATE
+e4ef3c4b-ae92-4b51-8793-0da8f6010c7d		w.Na		#URL
+e4ef3c4b-ae92-4b51-8793-0da8f6010c7d		prac.Je		#URL
+e4ef3c4b-ae92-4b51-8793-0da8f6010c7d		J.Pr		#URL
+e4ef3c4b-ae92-4b51-8793-0da8f6010c7d		ustalone.Za		#URL
+e4ef3c4b-ae92-4b51-8793-0da8f6010c7d		nie.Al		#URL
+e4ef3c4b-ae92-4b51-8793-0da8f6010c7d		2010-01-17		#DATE
+e4ef3c4b-ae92-4b51-8793-0da8f6010c7d		w.Na		#URL
+e4ef3c4b-ae92-4b51-8793-0da8f6010c7d		prac.Je		#URL
+e4ef3c4b-ae92-4b51-8793-0da8f6010c7d		J.Pr		#URL
+22cbce44-8310-4e1c-b7b6-0e7e2c76961c		eramuslim.com		#URL
+22cbce44-8310-4e1c-b7b6-0e7e2c76961c		eramuslim.com		#URL
+22cbce44-8310-4e1c-b7b6-0e7e2c76961c		eramuslim.com		#URL
+69a0a922-5d1e-41a8-a720-3063717a7118		4shared.com		#URL
+69a0a922-5d1e-41a8-a720-3063717a7118		22-39.mp		#URL
+69a0a922-5d1e-41a8-a720-3063717a7118		4shared.com		#URL
+69a0a922-5d1e-41a8-a720-3063717a7118		22-39.mp		#URL
+69a0a922-5d1e-41a8-a720-3063717a7118		4shared.com		#URL
+69a0a922-5d1e-41a8-a720-3063717a7118		22-39.mp		#URL
+81e8522d-e293-46de-9e5b-c6ba3b41a8cd		$18		#MONEY
+81e8522d-e293-46de-9e5b-c6ba3b41a8cd		$18		#MONEY
+81e8522d-e293-46de-9e5b-c6ba3b41a8cd		$18		#MONEY
+a0c0ecff-d4c8-459e-9d2e-b6e4069c1e32		$18		#MONEY
+a0c0ecff-d4c8-459e-9d2e-b6e4069c1e32		$18		#MONEY
+a0c0ecff-d4c8-459e-9d2e-b6e4069c1e32		$18		#MONEY
+95e46b80-7b34-41c8-87c5-e9e1c2acc285		$18		#MONEY
+95e46b80-7b34-41c8-87c5-e9e1c2acc285		$18		#MONEY
+95e46b80-7b34-41c8-87c5-e9e1c2acc285		$18		#MONEY
+46f832a6-58d8-4aec-a52c-167752b6081c		$18		#MONEY
+46f832a6-58d8-4aec-a52c-167752b6081c		$18		#MONEY
+46f832a6-58d8-4aec-a52c-167752b6081c		$18		#MONEY
+ca8298bd-d161-42d5-ad86-a7d8987de1a3		$18		#MONEY
+ca8298bd-d161-42d5-ad86-a7d8987de1a3		$18		#MONEY
+ca8298bd-d161-42d5-ad86-a7d8987de1a3		$18		#MONEY
+223c694f-4763-4e48-8f50-06a59a43db15		$18		#MONEY
+223c694f-4763-4e48-8f50-06a59a43db15		$18		#MONEY
+223c694f-4763-4e48-8f50-06a59a43db15		$18		#MONEY
+b3337f33-b76e-4c5b-9edd-162681c7f640		$18		#MONEY
+b3337f33-b76e-4c5b-9edd-162681c7f640		$18		#MONEY
+b3337f33-b76e-4c5b-9edd-162681c7f640		$18		#MONEY
+21c0a869-f562-46a6-8b12-86c96715fdd6		$18		#MONEY
+21c0a869-f562-46a6-8b12-86c96715fdd6		$18		#MONEY
+21c0a869-f562-46a6-8b12-86c96715fdd6		$18		#MONEY
+9dc34884-49fb-4143-9216-4d11eac15a26		$18		#MONEY
+9dc34884-49fb-4143-9216-4d11eac15a26		$18		#MONEY
+9dc34884-49fb-4143-9216-4d11eac15a26		$18		#MONEY
+8068f20d-331f-4776-89dc-30512e14dfb2		$18		#MONEY
+8068f20d-331f-4776-89dc-30512e14dfb2		$18		#MONEY
+8068f20d-331f-4776-89dc-30512e14dfb2		$18		#MONEY
+29dd1a96-40cc-4721-88c8-58991cd65c8e		http://5newsonline.com,xmlrpc.ph,5NEWSOnline.com		#URL
+29dd1a96-40cc-4721-88c8-58991cd65c8e		November 14, 2013		#DATE
+29dd1a96-40cc-4721-88c8-58991cd65c8e		13th		#ORD
+29dd1a96-40cc-4721-88c8-58991cd65c8e		5NEWSOnline.com		#URL
+29dd1a96-40cc-4721-88c8-58991cd65c8e		http://5newsonline.com,xmlrpc.ph,5NEWSOnline.com		#URL
+29dd1a96-40cc-4721-88c8-58991cd65c8e		November 14, 2013		#DATE
+29dd1a96-40cc-4721-88c8-58991cd65c8e		13th		#ORD
+29dd1a96-40cc-4721-88c8-58991cd65c8e		5NEWSOnline.com		#URL
+29dd1a96-40cc-4721-88c8-58991cd65c8e		http://5newsonline.com,xmlrpc.ph,5NEWSOnline.com		#URL
+29dd1a96-40cc-4721-88c8-58991cd65c8e		November 14, 2013		#DATE
+29dd1a96-40cc-4721-88c8-58991cd65c8e		13th		#ORD
+29dd1a96-40cc-4721-88c8-58991cd65c8e		5NEWSOnline.com		#URL
+42c43074-47be-4a6b-a17d-88f0c902f237		http://5newsonline.com,xmlrpc.ph,5NEWSOnline.com		#URL
+42c43074-47be-4a6b-a17d-88f0c902f237		April 21		#DATE
+42c43074-47be-4a6b-a17d-88f0c902f237		http://5newsonline.com,xmlrpc.ph,5NEWSOnline.com		#URL
+42c43074-47be-4a6b-a17d-88f0c902f237		April 21		#DATE
+42c43074-47be-4a6b-a17d-88f0c902f237		http://5newsonline.com,xmlrpc.ph,5NEWSOnline.com		#URL
+42c43074-47be-4a6b-a17d-88f0c902f237		April 21		#DATE
+e67a0392-41c5-4238-a386-93269ccc23a8		15€,10€		#MONEY
+e67a0392-41c5-4238-a386-93269ccc23a8		24.12.2011		#DATE
+e67a0392-41c5-4238-a386-93269ccc23a8		15€,10€		#MONEY
+e67a0392-41c5-4238-a386-93269ccc23a8		24.12.2011		#DATE
+e67a0392-41c5-4238-a386-93269ccc23a8		15€,10€		#MONEY
+e67a0392-41c5-4238-a386-93269ccc23a8		24.12.2011		#DATE
+c9a3d300-0ad9-4356-bde8-88e977bd9218		5th,6th		#ORD
+c9a3d300-0ad9-4356-bde8-88e977bd9218		5th,6th		#ORD
+c9a3d300-0ad9-4356-bde8-88e977bd9218		5th,6th		#ORD
+3544699c-1cdc-45e6-824e-8b2acfe8ca7c		October 21, 2013		#DATE
+3544699c-1cdc-45e6-824e-8b2acfe8ca7c		7:45:57 AM		#TIME
+3544699c-1cdc-45e6-824e-8b2acfe8ca7c		October 20, 2013		#DATE
+3544699c-1cdc-45e6-824e-8b2acfe8ca7c		$8		#MONEY
+3544699c-1cdc-45e6-824e-8b2acfe8ca7c		350 miles		#DIST
+3544699c-1cdc-45e6-824e-8b2acfe8ca7c		October 21, 2013		#DATE
+3544699c-1cdc-45e6-824e-8b2acfe8ca7c		7:45:57 AM		#TIME
+3544699c-1cdc-45e6-824e-8b2acfe8ca7c		October 20, 2013		#DATE
+3544699c-1cdc-45e6-824e-8b2acfe8ca7c		$8		#MONEY
+3544699c-1cdc-45e6-824e-8b2acfe8ca7c		350 miles		#DIST
+3544699c-1cdc-45e6-824e-8b2acfe8ca7c		October 21, 2013		#DATE
+3544699c-1cdc-45e6-824e-8b2acfe8ca7c		7:45:57 AM		#TIME
+3544699c-1cdc-45e6-824e-8b2acfe8ca7c		October 20, 2013		#DATE
+3544699c-1cdc-45e6-824e-8b2acfe8ca7c		$8		#MONEY
+3544699c-1cdc-45e6-824e-8b2acfe8ca7c		350 miles		#DIST
+60ed3fa1-3276-4bf2-81fe-6c1c9210cd42		December 25, 2013,December 25, 2013		#DATE
+60ed3fa1-3276-4bf2-81fe-6c1c9210cd42		6:49:18 AM		#TIME
+60ed3fa1-3276-4bf2-81fe-6c1c9210cd42		December 25, 2013,December 25, 2013		#DATE
+60ed3fa1-3276-4bf2-81fe-6c1c9210cd42		6:49:18 AM		#TIME
+60ed3fa1-3276-4bf2-81fe-6c1c9210cd42		December 25, 2013,December 25, 2013		#DATE
+60ed3fa1-3276-4bf2-81fe-6c1c9210cd42		6:49:18 AM		#TIME
+700bc3b9-6071-4863-b332-6a7a53915610		$50		#MONEY
+700bc3b9-6071-4863-b332-6a7a53915610		$6		#MONEY
+700bc3b9-6071-4863-b332-6a7a53915610		$50		#MONEY
+700bc3b9-6071-4863-b332-6a7a53915610		$10		#MONEY
+700bc3b9-6071-4863-b332-6a7a53915610		6DollarS		#MONEY
+700bc3b9-6071-4863-b332-6a7a53915610		$6		#MONEY
+700bc3b9-6071-4863-b332-6a7a53915610		6DollarS		#MONEY
+700bc3b9-6071-4863-b332-6a7a53915610		3rd		#ORD
+700bc3b9-6071-4863-b332-6a7a53915610		6DollarS,6 Dollar		#MONEY
+700bc3b9-6071-4863-b332-6a7a53915610		6DollarShirts.com		#URL
+700bc3b9-6071-4863-b332-6a7a53915610		$50		#MONEY
+700bc3b9-6071-4863-b332-6a7a53915610		$6		#MONEY
+700bc3b9-6071-4863-b332-6a7a53915610		$50		#MONEY
+700bc3b9-6071-4863-b332-6a7a53915610		$10		#MONEY
+700bc3b9-6071-4863-b332-6a7a53915610		6DollarS		#MONEY
+700bc3b9-6071-4863-b332-6a7a53915610		$6		#MONEY
+700bc3b9-6071-4863-b332-6a7a53915610		6DollarS		#MONEY
+700bc3b9-6071-4863-b332-6a7a53915610		3rd		#ORD
+700bc3b9-6071-4863-b332-6a7a53915610		6DollarS,6 Dollar		#MONEY
+700bc3b9-6071-4863-b332-6a7a53915610		6DollarShirts.com		#URL
+700bc3b9-6071-4863-b332-6a7a53915610		$50		#MONEY
+700bc3b9-6071-4863-b332-6a7a53915610		$6		#MONEY
+700bc3b9-6071-4863-b332-6a7a53915610		$50		#MONEY
+700bc3b9-6071-4863-b332-6a7a53915610		$10		#MONEY
+700bc3b9-6071-4863-b332-6a7a53915610		6DollarS		#MONEY
+700bc3b9-6071-4863-b332-6a7a53915610		$6		#MONEY
+700bc3b9-6071-4863-b332-6a7a53915610		6DollarS		#MONEY
+700bc3b9-6071-4863-b332-6a7a53915610		3rd		#ORD
+700bc3b9-6071-4863-b332-6a7a53915610		6DollarS,6 Dollar		#MONEY
+700bc3b9-6071-4863-b332-6a7a53915610		6DollarShirts.com		#URL
+65eb4432-c458-40e8-93aa-d7f399c680e4		$50		#MONEY
+65eb4432-c458-40e8-93aa-d7f399c680e4		$6		#MONEY
+65eb4432-c458-40e8-93aa-d7f399c680e4		$50		#MONEY
+65eb4432-c458-40e8-93aa-d7f399c680e4		$10		#MONEY
+65eb4432-c458-40e8-93aa-d7f399c680e4		6DollarS		#MONEY
+65eb4432-c458-40e8-93aa-d7f399c680e4		$6		#MONEY
+65eb4432-c458-40e8-93aa-d7f399c680e4		6DollarS		#MONEY
+65eb4432-c458-40e8-93aa-d7f399c680e4		3rd		#ORD
+65eb4432-c458-40e8-93aa-d7f399c680e4		6DollarS,6 Dollar		#MONEY
+65eb4432-c458-40e8-93aa-d7f399c680e4		6DollarShirts.com		#URL
+65eb4432-c458-40e8-93aa-d7f399c680e4		$50		#MONEY
+65eb4432-c458-40e8-93aa-d7f399c680e4		$6		#MONEY
+65eb4432-c458-40e8-93aa-d7f399c680e4		$50		#MONEY
+65eb4432-c458-40e8-93aa-d7f399c680e4		$10		#MONEY
+65eb4432-c458-40e8-93aa-d7f399c680e4		6DollarS		#MONEY
+65eb4432-c458-40e8-93aa-d7f399c680e4		$6		#MONEY
+65eb4432-c458-40e8-93aa-d7f399c680e4		6DollarS		#MONEY
+65eb4432-c458-40e8-93aa-d7f399c680e4		3rd		#ORD
+65eb4432-c458-40e8-93aa-d7f399c680e4		6DollarS,6 Dollar		#MONEY
+65eb4432-c458-40e8-93aa-d7f399c680e4		6DollarShirts.com		#URL
+65eb4432-c458-40e8-93aa-d7f399c680e4		$50		#MONEY
+65eb4432-c458-40e8-93aa-d7f399c680e4		$6		#MONEY
+65eb4432-c458-40e8-93aa-d7f399c680e4		$50		#MONEY
+65eb4432-c458-40e8-93aa-d7f399c680e4		$10		#MONEY
+65eb4432-c458-40e8-93aa-d7f399c680e4		6DollarS		#MONEY
+65eb4432-c458-40e8-93aa-d7f399c680e4		$6		#MONEY
+65eb4432-c458-40e8-93aa-d7f399c680e4		6DollarS		#MONEY
+65eb4432-c458-40e8-93aa-d7f399c680e4		3rd		#ORD
+65eb4432-c458-40e8-93aa-d7f399c680e4		6DollarS,6 Dollar		#MONEY
+65eb4432-c458-40e8-93aa-d7f399c680e4		6DollarShirts.com		#URL
+70c246de-2292-495a-a1e7-f7af0dd76bf0		February 12, 2012		#DATE
+70c246de-2292-495a-a1e7-f7af0dd76bf0		February 23, 2012		#DATE
+70c246de-2292-495a-a1e7-f7af0dd76bf0		February 12, 2012		#DATE
+70c246de-2292-495a-a1e7-f7af0dd76bf0		February 23, 2012		#DATE
+70c246de-2292-495a-a1e7-f7af0dd76bf0		February 12, 2012		#DATE
+70c246de-2292-495a-a1e7-f7af0dd76bf0		February 23, 2012		#DATE
+897847bf-0f9b-487a-93d0-ab54ea8b026a		October 01, 2010		#DATE
+897847bf-0f9b-487a-93d0-ab54ea8b026a		October 01, 2010		#DATE
+897847bf-0f9b-487a-93d0-ab54ea8b026a		October 01, 2010		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		February 24, 2010		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		April 13, 2011		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		July 05, 2013		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		June 20, 2011		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		April 21, 2013		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		June 15, 2009		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		July 17, 2009		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		February 10, 2013		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		November 05, 2012		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		February 24, 2010		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		April 13, 2011		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		July 05, 2013		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		June 20, 2011		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		April 21, 2013		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		June 15, 2009		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		July 17, 2009		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		February 10, 2013		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		November 05, 2012		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		February 24, 2010		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		April 13, 2011		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		July 05, 2013		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		June 20, 2011		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		April 21, 2013		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		June 15, 2009		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		July 17, 2009		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		February 10, 2013		#DATE
+2dcecbef-d8d4-429b-b5d5-503232d3a9c8		November 05, 2012		#DATE
+68e21b4e-32ca-46e7-ade2-774b29cb8285		Clipart.com		#URL
+68e21b4e-32ca-46e7-ade2-774b29cb8285		Clipart.com		#URL
+68e21b4e-32ca-46e7-ade2-774b29cb8285		Clipart.com		#URL
+d4bd4b52-910d-4518-878d-3c07f52107bc		517-363-2929 		#PHONE
+d4bd4b52-910d-4518-878d-3c07f52107bc		517-363-2929 		#PHONE
+d4bd4b52-910d-4518-878d-3c07f52107bc		517-363-2929 		#PHONE
+20078d59-9b29-4568-82f0-c4b517c16820		517-363-2941 		#PHONE
+20078d59-9b29-4568-82f0-c4b517c16820		517-363-2941 		#PHONE
+20078d59-9b29-4568-82f0-c4b517c16820		517-363-2941 		#PHONE
+66b9d611-6d40-4e74-8147-a4cdb62b5005		January 6, 2012		#DATE
+66b9d611-6d40-4e74-8147-a4cdb62b5005		January 6, 2012		#DATE
+66b9d611-6d40-4e74-8147-a4cdb62b5005		January 6, 2012		#DATE
+2b5e0f19-0ab7-48e2-b28b-2b9159cba2bb		April 20, 2012		#DATE
+2b5e0f19-0ab7-48e2-b28b-2b9159cba2bb		April 20, 2012		#DATE
+2b5e0f19-0ab7-48e2-b28b-2b9159cba2bb		April 20, 2012		#DATE
+29d1e70e-fa72-455f-9db5-9fc1730bfe93		22nd		#ORD
+29d1e70e-fa72-455f-9db5-9fc1730bfe93		22nd		#ORD
+29d1e70e-fa72-455f-9db5-9fc1730bfe93		22nd		#ORD
+2fb713b3-d123-48ff-b042-460d7f27ea8e		http://youtu.be		#URL
+2fb713b3-d123-48ff-b042-460d7f27ea8e		http://youtu.be		#URL
+2fb713b3-d123-48ff-b042-460d7f27ea8e		http://youtu.be		#URL
+a27f44c5-2d7e-4970-86b2-f080669ff369		69 feet		#DIST
+a27f44c5-2d7e-4970-86b2-f080669ff369		93 feet		#DIST
+a27f44c5-2d7e-4970-86b2-f080669ff369		69 feet		#DIST
+a27f44c5-2d7e-4970-86b2-f080669ff369		93 feet		#DIST
+a27f44c5-2d7e-4970-86b2-f080669ff369		69 feet		#DIST
+a27f44c5-2d7e-4970-86b2-f080669ff369		93 feet		#DIST
+59af4f5b-2215-4fbd-8b52-c2476a18f58f		automattic.com		#URL
+59af4f5b-2215-4fbd-8b52-c2476a18f58f		02/11/2014		#DATE
+59af4f5b-2215-4fbd-8b52-c2476a18f58f		Radio.com		#URL
+59af4f5b-2215-4fbd-8b52-c2476a18f58f		automattic.com		#URL
+59af4f5b-2215-4fbd-8b52-c2476a18f58f		02/11/2014		#DATE
+59af4f5b-2215-4fbd-8b52-c2476a18f58f		Radio.com		#URL
+59af4f5b-2215-4fbd-8b52-c2476a18f58f		automattic.com		#URL
+59af4f5b-2215-4fbd-8b52-c2476a18f58f		02/11/2014		#DATE
+59af4f5b-2215-4fbd-8b52-c2476a18f58f		Radio.com		#URL
+c5b9001f-be63-4797-87c7-50b42da18c1d		March 19, 2013		#DATE
+c5b9001f-be63-4797-87c7-50b42da18c1d		March 19, 2013		#DATE
+c5b9001f-be63-4797-87c7-50b42da18c1d		March 19, 2013		#DATE
+eeca609d-8b34-4a64-b862-23d9ba072ab8		May 29, 2011		#DATE
+eeca609d-8b34-4a64-b862-23d9ba072ab8		May 16, 2011,May 25		#DATE
+eeca609d-8b34-4a64-b862-23d9ba072ab8		May 29, 2011		#DATE
+eeca609d-8b34-4a64-b862-23d9ba072ab8		May 16, 2011,May 25		#DATE
+eeca609d-8b34-4a64-b862-23d9ba072ab8		May 29, 2011		#DATE
+eeca609d-8b34-4a64-b862-23d9ba072ab8		May 16, 2011,May 25		#DATE
+5045c317-1a9c-473f-97f2-6a18487fde9a		automattic.com		#URL
+5045c317-1a9c-473f-97f2-6a18487fde9a		automattic.com		#URL
+5045c317-1a9c-473f-97f2-6a18487fde9a		automattic.com		#URL
+0766cc79-5c07-4215-8f95-91ff9706ccbd		automattic.com		#URL
+0766cc79-5c07-4215-8f95-91ff9706ccbd		automattic.com		#URL
+0766cc79-5c07-4215-8f95-91ff9706ccbd		automattic.com		#URL
+79fef210-4669-4f76-a382-26f2063b68ca		automattic.com		#URL
+79fef210-4669-4f76-a382-26f2063b68ca		Radio.com		#URL
+79fef210-4669-4f76-a382-26f2063b68ca		automattic.com		#URL
+79fef210-4669-4f76-a382-26f2063b68ca		Radio.com		#URL
+79fef210-4669-4f76-a382-26f2063b68ca		automattic.com		#URL
+79fef210-4669-4f76-a382-26f2063b68ca		Radio.com		#URL
+ed83e811-8c26-4af3-96db-f0535bdda189		automattic.com		#URL
+ed83e811-8c26-4af3-96db-f0535bdda189		Radio.com		#URL
+ed83e811-8c26-4af3-96db-f0535bdda189		automattic.com		#URL
+ed83e811-8c26-4af3-96db-f0535bdda189		Radio.com		#URL
+ed83e811-8c26-4af3-96db-f0535bdda189		automattic.com		#URL
+ed83e811-8c26-4af3-96db-f0535bdda189		Radio.com		#URL
+6ce7ebdb-ecf8-4b0e-a4a2-83f764dec608		January 6, 2013		#DATE
+6ce7ebdb-ecf8-4b0e-a4a2-83f764dec608		December 20, 2012		#DATE
+6ce7ebdb-ecf8-4b0e-a4a2-83f764dec608		December 13, 2012		#DATE
+6ce7ebdb-ecf8-4b0e-a4a2-83f764dec608		November 28, 2012		#DATE
+6ce7ebdb-ecf8-4b0e-a4a2-83f764dec608		November 8, 2012		#DATE
+6ce7ebdb-ecf8-4b0e-a4a2-83f764dec608		February 9, 2012		#DATE
+6ce7ebdb-ecf8-4b0e-a4a2-83f764dec608		September 28, 2011		#DATE
+6ce7ebdb-ecf8-4b0e-a4a2-83f764dec608		September 9, 2011,September 21		#DATE
+6ce7ebdb-ecf8-4b0e-a4a2-83f764dec608		January 6, 2013		#DATE
+6ce7ebdb-ecf8-4b0e-a4a2-83f764dec608		December 20, 2012		#DATE
+6ce7ebdb-ecf8-4b0e-a4a2-83f764dec608		December 13, 2012		#DATE
+6ce7ebdb-ecf8-4b0e-a4a2-83f764dec608		November 28, 2012		#DATE
+6ce7ebdb-ecf8-4b0e-a4a2-83f764dec608		November 8, 2012		#DATE
+6ce7ebdb-ecf8-4b0e-a4a2-83f764dec608		February 9, 2012		#DATE
+6ce7ebdb-ecf8-4b0e-a4a2-83f764dec608		September 28, 2011		#DATE
+6ce7ebdb-ecf8-4b0e-a4a2-83f764dec608		September 9, 2011,September 21		#DATE
+6ce7ebdb-ecf8-4b0e-a4a2-83f764dec608		January 6, 2013		#DATE
+6ce7ebdb-ecf8-4b0e-a4a2-83f764dec608		December 20, 2012		#DATE
+6ce7ebdb-ecf8-4b0e-a4a2-83f764dec608		December 13, 2012		#DATE
+6ce7ebdb-ecf8-4b0e-a4a2-83f764dec608		November 28, 2012		#DATE
+6ce7ebdb-ecf8-4b0e-a4a2-83f764dec608		November 8, 2012		#DATE
+6ce7ebdb-ecf8-4b0e-a4a2-83f764dec608		February 9, 2012		#DATE
+6ce7ebdb-ecf8-4b0e-a4a2-83f764dec608		September 28, 2011		#DATE
+6ce7ebdb-ecf8-4b0e-a4a2-83f764dec608		September 9, 2011,September 21		#DATE
+a68dc5e5-4df7-4c27-96c0-981323a09504		$150,$150		#MONEY
+a68dc5e5-4df7-4c27-96c0-981323a09504		$150,$150		#MONEY
+a68dc5e5-4df7-4c27-96c0-981323a09504		$150,$150		#MONEY
+09994c45-2a77-4f31-94aa-a1d241e41c23		1 800 513 1678 		#PHONE
+09994c45-2a77-4f31-94aa-a1d241e41c23		1 800 513 1678 		#PHONE
+09994c45-2a77-4f31-94aa-a1d241e41c23		1 800 513 1678 		#PHONE
+6279ff08-570e-4d87-bace-861137b57525		akidsheart.com,akidsheart.com		#URL
+6279ff08-570e-4d87-bace-861137b57525		Akidsheart.com		#URL
+6279ff08-570e-4d87-bace-861137b57525		Akidsheart.com		#URL
+6279ff08-570e-4d87-bace-861137b57525		akidsheart.com,akidsheart.com		#URL
+6279ff08-570e-4d87-bace-861137b57525		Akidsheart.com		#URL
+6279ff08-570e-4d87-bace-861137b57525		Akidsheart.com		#URL
+6279ff08-570e-4d87-bace-861137b57525		akidsheart.com,akidsheart.com		#URL
+6279ff08-570e-4d87-bace-861137b57525		Akidsheart.com		#URL
+6279ff08-570e-4d87-bace-861137b57525		Akidsheart.com		#URL
+09f9beec-9df3-451d-b038-2a90e46017f4		ceicmh.org,ceicmh.org,ceicmh.org,ASP.NET		#URL
+09f9beec-9df3-451d-b038-2a90e46017f4		ceicmh.org,ceicmh.org,ceicmh.org,ASP.NET		#URL
+09f9beec-9df3-451d-b038-2a90e46017f4		ceicmh.org,ceicmh.org,ceicmh.org,ASP.NET		#URL
+ad7317a9-2f15-4a41-a395-870bfac04b4c		11:55:59		#TIME
+ad7317a9-2f15-4a41-a395-870bfac04b4c		11:55:59		#TIME
+ad7317a9-2f15-4a41-a395-870bfac04b4c		11:55:59		#TIME
+d2c465c9-397e-45d7-8931-a99b15d32ad8		August 10, 2013		#DATE
+d2c465c9-397e-45d7-8931-a99b15d32ad8		1.7m,20ft,20ft		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		20ft		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		1.53m,2.1m,100 km		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		August 8, 1991		#DATE
+d2c465c9-397e-45d7-8931-a99b15d32ad8		4 inch		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		3 feet		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		30m		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		30m		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		2 Meter		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		70 cm		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		70cm		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		3M		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		3 foot		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		J.an		#URL
+d2c465c9-397e-45d7-8931-a99b15d32ad8		August 10, 2013		#DATE
+d2c465c9-397e-45d7-8931-a99b15d32ad8		1.7m,20ft,20ft		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		20ft		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		1.53m,2.1m,100 km		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		August 8, 1991		#DATE
+d2c465c9-397e-45d7-8931-a99b15d32ad8		4 inch		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		3 feet		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		30m		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		30m		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		2 Meter		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		70 cm		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		70cm		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		3M		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		3 foot		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		J.an		#URL
+d2c465c9-397e-45d7-8931-a99b15d32ad8		August 10, 2013		#DATE
+d2c465c9-397e-45d7-8931-a99b15d32ad8		1.7m,20ft,20ft		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		20ft		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		1.53m,2.1m,100 km		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		August 8, 1991		#DATE
+d2c465c9-397e-45d7-8931-a99b15d32ad8		4 inch		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		3 feet		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		30m		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		30m		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		2 Meter		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		70 cm		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		70cm		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		3M		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		3 foot		#DIST
+d2c465c9-397e-45d7-8931-a99b15d32ad8		J.an		#URL
+39fa2a6b-c192-4c84-9800-a7a909e1f3d8		aaai.org		#URL
+39fa2a6b-c192-4c84-9800-a7a909e1f3d8		aaai.org		#URL
+39fa2a6b-c192-4c84-9800-a7a909e1f3d8		aaai.org		#URL
+d90138b2-82a9-4861-b3d6-1995a534c6ff		31st		#ORD
+d90138b2-82a9-4861-b3d6-1995a534c6ff		October 14, 1999		#DATE
+d90138b2-82a9-4861-b3d6-1995a534c6ff		31st		#ORD
+d90138b2-82a9-4861-b3d6-1995a534c6ff		October 14, 1999		#DATE
+d90138b2-82a9-4861-b3d6-1995a534c6ff		31st		#ORD
+d90138b2-82a9-4861-b3d6-1995a534c6ff		October 14, 1999		#DATE
+c25308b2-a0c0-4ee1-b95e-7f87a053d680		3rd		#ORD
+c25308b2-a0c0-4ee1-b95e-7f87a053d680		3 December 2001		#DATE
+c25308b2-a0c0-4ee1-b95e-7f87a053d680		9 February 1929		#DATE
+c25308b2-a0c0-4ee1-b95e-7f87a053d680		21 August 2014,14 November 2014,14 August 2015		#DATE
+c25308b2-a0c0-4ee1-b95e-7f87a053d680		(202) 328-2010 		#PHONE
+c25308b2-a0c0-4ee1-b95e-7f87a053d680		3rd		#ORD
+c25308b2-a0c0-4ee1-b95e-7f87a053d680		3 December 2001		#DATE
+c25308b2-a0c0-4ee1-b95e-7f87a053d680		9 February 1929		#DATE
+c25308b2-a0c0-4ee1-b95e-7f87a053d680		21 August 2014,14 November 2014,14 August 2015		#DATE
+c25308b2-a0c0-4ee1-b95e-7f87a053d680		(202) 328-2010 		#PHONE
+c25308b2-a0c0-4ee1-b95e-7f87a053d680		3rd		#ORD
+c25308b2-a0c0-4ee1-b95e-7f87a053d680		3 December 2001		#DATE
+c25308b2-a0c0-4ee1-b95e-7f87a053d680		9 February 1929		#DATE
+c25308b2-a0c0-4ee1-b95e-7f87a053d680		21 August 2014,14 November 2014,14 August 2015		#DATE
+c25308b2-a0c0-4ee1-b95e-7f87a053d680		(202) 328-2010 		#PHONE
+342b99c6-9e5d-4481-a48b-536d2d159d36		wordpress.com,xmlrpc.ph		#URL
+342b99c6-9e5d-4481-a48b-536d2d159d36		Salaf.Af		#URL
+342b99c6-9e5d-4481-a48b-536d2d159d36		2.An		#URL
+342b99c6-9e5d-4481-a48b-536d2d159d36		or.id		#URL
+342b99c6-9e5d-4481-a48b-536d2d159d36		or.id		#URL
+342b99c6-9e5d-4481-a48b-536d2d159d36		2 April 2007		#DATE
+342b99c6-9e5d-4481-a48b-536d2d159d36		2 April 2007		#DATE
+342b99c6-9e5d-4481-a48b-536d2d159d36		2 April 2007		#DATE
+342b99c6-9e5d-4481-a48b-536d2d159d36		45 Km		#DIST
+342b99c6-9e5d-4481-a48b-536d2d159d36		or.id		#URL
+342b99c6-9e5d-4481-a48b-536d2d159d36		ust.fi		#URL
+342b99c6-9e5d-4481-a48b-536d2d159d36		WordPress.com		#URL
+342b99c6-9e5d-4481-a48b-536d2d159d36		wordpress.com,xmlrpc.ph		#URL
+342b99c6-9e5d-4481-a48b-536d2d159d36		Salaf.Af		#URL
+342b99c6-9e5d-4481-a48b-536d2d159d36		2.An		#URL
+342b99c6-9e5d-4481-a48b-536d2d159d36		or.id		#URL
+342b99c6-9e5d-4481-a48b-536d2d159d36		or.id		#URL
+342b99c6-9e5d-4481-a48b-536d2d159d36		2 April 2007		#DATE
+342b99c6-9e5d-4481-a48b-536d2d159d36		2 April 2007		#DATE
+342b99c6-9e5d-4481-a48b-536d2d159d36		2 April 2007		#DATE
+342b99c6-9e5d-4481-a48b-536d2d159d36		45 Km		#DIST
+342b99c6-9e5d-4481-a48b-536d2d159d36		or.id		#URL
+342b99c6-9e5d-4481-a48b-536d2d159d36		ust.fi		#URL
+342b99c6-9e5d-4481-a48b-536d2d159d36		WordPress.com		#URL
+342b99c6-9e5d-4481-a48b-536d2d159d36		wordpress.com,xmlrpc.ph		#URL
+342b99c6-9e5d-4481-a48b-536d2d159d36		Salaf.Af		#URL
+342b99c6-9e5d-4481-a48b-536d2d159d36		2.An		#URL
+342b99c6-9e5d-4481-a48b-536d2d159d36		or.id		#URL
+342b99c6-9e5d-4481-a48b-536d2d159d36		or.id		#URL
+342b99c6-9e5d-4481-a48b-536d2d159d36		2 April 2007		#DATE
+342b99c6-9e5d-4481-a48b-536d2d159d36		2 April 2007		#DATE
+342b99c6-9e5d-4481-a48b-536d2d159d36		2 April 2007		#DATE
+342b99c6-9e5d-4481-a48b-536d2d159d36		45 Km		#DIST
+342b99c6-9e5d-4481-a48b-536d2d159d36		or.id		#URL
+342b99c6-9e5d-4481-a48b-536d2d159d36		ust.fi		#URL
+342b99c6-9e5d-4481-a48b-536d2d159d36		WordPress.com		#URL
+ef1c97ad-597c-4feb-8f23-d8755d9709bb		abc7.com		#URL
+ef1c97ad-597c-4feb-8f23-d8755d9709bb		OnTheRedCarpet.com		#URL
+ef1c97ad-597c-4feb-8f23-d8755d9709bb		abc7.com		#URL
+ef1c97ad-597c-4feb-8f23-d8755d9709bb		OnTheRedCarpet.com		#URL
+ef1c97ad-597c-4feb-8f23-d8755d9709bb		abc7.com		#URL
+ef1c97ad-597c-4feb-8f23-d8755d9709bb		OnTheRedCarpet.com		#URL
+ecc2b88e-442b-4c9c-a1fc-3a95cbafb518		abcnews.com		#URL
+ecc2b88e-442b-4c9c-a1fc-3a95cbafb518		abcnews.com		#URL
+ecc2b88e-442b-4c9c-a1fc-3a95cbafb518		abcnews.com		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		$500,000		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		$500,000		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		July 11		#DATE
+fcecec58-6115-477d-bfc8-18d571811f40		80 feet		#DIST
+fcecec58-6115-477d-bfc8-18d571811f40		March 14, 2014		#DATE
+fcecec58-6115-477d-bfc8-18d571811f40		$35 million		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		$3.5 million		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		17 miles		#DIST
+fcecec58-6115-477d-bfc8-18d571811f40		$7		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		$550,000.,$17 million		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		$2.8 million		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		167th		#ORD
+fcecec58-6115-477d-bfc8-18d571811f40		$10.9 million		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		http://www.re,dfin.com,Redfin.com		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		Redfin.com		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		$1		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		Redfin.com		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		$385,000		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		Realtor.com		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		$750,000		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		May 22, 2013		#DATE
+fcecec58-6115-477d-bfc8-18d571811f40		Realtor.com		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		$40,000,$3.3 million		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		http://bit.ly		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		19th		#ORD
+fcecec58-6115-477d-bfc8-18d571811f40		$150,000		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		$873,000		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		June 7, 2012		#DATE
+fcecec58-6115-477d-bfc8-18d571811f40		$2.7 million		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		upsidedownhouse.com		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		$4 million		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		flickr.com		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		www.co,ralcastle.com		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		$179,000		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		May 1		#DATE
+fcecec58-6115-477d-bfc8-18d571811f40		Waterstudio.NL		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		$500,000		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		$500,000		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		July 11		#DATE
+fcecec58-6115-477d-bfc8-18d571811f40		80 feet		#DIST
+fcecec58-6115-477d-bfc8-18d571811f40		March 14, 2014		#DATE
+fcecec58-6115-477d-bfc8-18d571811f40		$35 million		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		$3.5 million		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		17 miles		#DIST
+fcecec58-6115-477d-bfc8-18d571811f40		$7		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		$550,000.,$17 million		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		$2.8 million		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		167th		#ORD
+fcecec58-6115-477d-bfc8-18d571811f40		$10.9 million		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		http://www.re,dfin.com,Redfin.com		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		Redfin.com		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		$1		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		Redfin.com		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		$385,000		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		Realtor.com		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		$750,000		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		May 22, 2013		#DATE
+fcecec58-6115-477d-bfc8-18d571811f40		Realtor.com		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		$40,000,$3.3 million		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		http://bit.ly		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		19th		#ORD
+fcecec58-6115-477d-bfc8-18d571811f40		$150,000		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		$873,000		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		June 7, 2012		#DATE
+fcecec58-6115-477d-bfc8-18d571811f40		$2.7 million		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		upsidedownhouse.com		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		$4 million		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		flickr.com		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		www.co,ralcastle.com		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		$179,000		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		May 1		#DATE
+fcecec58-6115-477d-bfc8-18d571811f40		Waterstudio.NL		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		$500,000		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		$500,000		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		July 11		#DATE
+fcecec58-6115-477d-bfc8-18d571811f40		80 feet		#DIST
+fcecec58-6115-477d-bfc8-18d571811f40		March 14, 2014		#DATE
+fcecec58-6115-477d-bfc8-18d571811f40		$35 million		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		$3.5 million		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		17 miles		#DIST
+fcecec58-6115-477d-bfc8-18d571811f40		$7		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		$550,000.,$17 million		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		$2.8 million		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		167th		#ORD
+fcecec58-6115-477d-bfc8-18d571811f40		$10.9 million		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		http://www.re,dfin.com,Redfin.com		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		Redfin.com		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		$1		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		Redfin.com		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		$385,000		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		Realtor.com		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		$750,000		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		May 22, 2013		#DATE
+fcecec58-6115-477d-bfc8-18d571811f40		Realtor.com		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		$40,000,$3.3 million		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		http://bit.ly		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		19th		#ORD
+fcecec58-6115-477d-bfc8-18d571811f40		$150,000		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		$873,000		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		June 7, 2012		#DATE
+fcecec58-6115-477d-bfc8-18d571811f40		$2.7 million		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		upsidedownhouse.com		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		$4 million		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		flickr.com		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		www.co,ralcastle.com		#URL
+fcecec58-6115-477d-bfc8-18d571811f40		$179,000		#MONEY
+fcecec58-6115-477d-bfc8-18d571811f40		May 1		#DATE
+fcecec58-6115-477d-bfc8-18d571811f40		Waterstudio.NL		#URL
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$300,000,$150,000		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		ComicConnect.com		#URL
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$300,000,$150,000		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		go.com		#URL
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		ComicConnect.com		#URL
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$45,000		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		July 4, 1939		#DATE
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$95,600		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		July 31, 2014		#DATE
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$95,600		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$10,000		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$10,000		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$177,860		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$10,755		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$1.3 million		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		July 12, 2014		#DATE
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$1.02 million		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		July 12, 2014		#DATE
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$195,000		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		1.2 inches		#DIST
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$180		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$4		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		4M		#DIST
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		July 1, 2014		#DATE
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$4.3 million		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$15,757		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		LegendaryAuctions.com		#URL
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		17th		#ORD
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		June 26, 2014		#DATE
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$1.2 million		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		LegendaryAuctions.com		#URL
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$2		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$18,000		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$350,000		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		June 4, 2014		#DATE
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$18.4 million		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		13,537,500 euros		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		May 17, 2014		#DATE
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$657,000,$400,000,$600,000		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		May 16, 2014		#DATE
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$262,900		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		May 16, 2014		#DATE
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$95,600		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		May 16, 2014		#DATE
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$95,600		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$337,000		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$14,100,$14,100		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$1		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		April 26, 2014		#DATE
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$185,000		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		April 13, 2014		#DATE
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$25,600		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		36m		#DIST
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		go.com		#URL
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		March 6, 2014		#DATE
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$10,000		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$10,000		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		March 20, 2014		#DATE
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$83,000		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$327,000		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		241,500 euros		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$717,000		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$460,000		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$2 million		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$11,000		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$7.87,$4.58 million,$3.29 million		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$7.87		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$7.87		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$104,765		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		June 11		#DATE
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$31,070		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$1		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$865,000		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$200,000,$300,000		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$23,473,$21,005		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		Shopgoodwill.com		#URL
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$165,002		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		Shopgoodwill.com		#URL
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$620,$620,000		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$105.4 million		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$20.3 million,$11.4 million,$7.3 million		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$1.1 Million		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$142.4 million		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$1.1 million		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$864,285		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$1.16 million		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		cah.net		#URL
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$2		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$1.6 million		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$2.5 Million		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$2.5 million		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$29.7 Million		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$29.7 million		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		Charitybuzz.com		#URL
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$450,000		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$1 million,$3		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$168,000		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		July 30, 2013		#DATE
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$40,000,$60,000,$168,000		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		June 7		#DATE
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$9.5 Million		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		June 9		#DATE
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$9.5 million		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$600 million		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		590 feet		#DIST
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$32.4 million		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		25 million euros		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		SWNS.com		#URL
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$34,000		#MONEY
+d8d4eea4-4422-446e-ab0e-014f4ab54ca0		$6,£4		#MONEY
