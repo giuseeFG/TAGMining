@@ -1,0 +1,13 @@
+trec_id		String			Tag
+
+00000		Ask.com			#URL
+00000		Answers.com		#URL
+00003		(561) 488-2332  	#PHONE
+00005		00perdomain.com		#URL
+00005		$5.95,$8.75		#MONEY
+00012		00perdomain.com		#URL
+00123		18th			#ORD
+00125		18 Jan 2009		#DATE
+00125		05:39:50 		#TIME
+00133		50cm			#DIST
+…

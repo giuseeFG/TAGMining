@@ -1,0 +1,10 @@
+trec_id	Old_String
+00001	We use the information we collect about you to process orders and to provide a more personalized shopping experience
+00002	Click on the colour palette to view the changes
+00003	If you have a question about the Our Product or Orders that you want to know then please submit it here
+00011	Breaking news and features plus background material including profiles and global reactions
+00011	  Aggregated headlines and a search engine of many of the world's news sources
+00012	To better protect your privacy we provide this privacy policy notice explaining our online information practices and the choices you can make about the way your information is collected and used
+00012	Zaz Corporation is the sole owner of the information collected on 00perdomain.com
+00123	Visit my 18th century blog
+00127	13 Jan 2009 The Mozilla Foundation, which we all know and love for their Firefox browser, has recently put out version 0.2 of their Snowl experiment
