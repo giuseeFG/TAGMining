@@ -1,9 +1,9 @@
 var http = require('http'),
-	fs = require('fs'),
-	url = require('url'),
-	parseString = require('xml2js').parseString,
-	html_strip = require('htmlstrip-native'),
-	WARCStream = require('warc');
+    fs = require('fs'),
+    url = require('url'),
+    parseString = require('xml2js').parseString,
+    html_strip = require('htmlstrip-native'),
+    WARCStream = require('warc');
 
 var w = new WARCStream();
 var output = {};
@@ -11,9 +11,10 @@ var title = '';
 var record_id = '';
 var removingList = [];
 
+
+// open flows to .txt docs
 var wstream_out1 = fs.createWriteStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT1_CC.txt');
 wstream_out1.write('record_id\t\tString\t\tTag\n');
-
 
 var wstream_out2 = fs.createWriteStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/TAGMining/OUT2_CC.txt');
 wstream_out2.write('record_id\tOld_String\n');
@@ -71,211 +72,215 @@ var URL = /((http|ftp|https):\/{2})?(([0-9a-z_-]+\.)(aero|asia|biz|cat|com|coop|
 
 
 fs.createReadStream('/Volumes/MacbookHD/Documenti/MYSTUFF/RM3/2nd/AGIW/CC-MAIN-20140820021320-00001-ip-10-180-136-8.ec2.internal.warc')
-	.pipe(w)
-	.on('data', function(data) {
-		if (data.headers["WARC-Type"] === "response") {
-			output.record_id_long = data.headers["WARC-Record-ID"];
-			output.content = data.content.toString();
+    .pipe(w)
+    .on('data', function(data) {
+        if (data.headers["WARC-Type"] === "response") {
+            output.record_id_long = data.headers["WARC-Record-ID"];
+            output.content = data.content.toString();
 
-		}
-		try {
-			var indexOfBodyBegin = output.content.indexOf("<body>");
-			var indexOfBodyEnd = output.content.indexOf("</body>") + 7;
+        }
+        try {
+            var indexOfBodyBegin = output.content.indexOf("<body>");
+            var indexOfBodyEnd = output.content.indexOf("</body>") + 7;
 
-			//Removing a tags
-			var a_tag = /<a(.*?)<\/a>/gmi;
-			output.content = output.content.replace(a_tag, "");
+            //Removing a tags
+            var a_tag = /<a(.*?)<\/a>/gmi;
+            output.content = output.content.replace(a_tag, "");
 
-			var doc = {
-				record_id: output.record_id_long.substring(output.record_id_long.length - 37, output.record_id_long.length-1),
-				content: output.content.substring(indexOfBodyBegin, indexOfBodyEnd),
-			}
-			
-
-			var options = {
-				include_script : false,
-				include_style : false,
-				compact_whitespace : true
-		};
-	 
-		// Strip tags and decode HTML entities 
-			doc.content = html_strip.html_strip(doc.content, options);
-
-		//Extract Phrases splitting by . ! ?
-			splitString = function(string, splitters) {
-	    		var list = [string];
-			    for(var i=0, len=splitters.length; i<len; i++) {
-			        traverseList(list, splitters[i], 0);
-			    }
-			    return flatten(list);
-			}
-
-			traverseList = function(list, splitter, index) {
-			    if(list[index]) {
-			        if((list.constructor !== String) && (list[index].constructor === String))
-			            (list[index] != list[index].split(splitter)) ? list[index] = list[index].split(splitter) : null;
-			        (list[index].constructor === Array) ? traverseList(list[index], splitter, 0) : null;
-			        (list.constructor === Array) ? traverseList(list, splitter, index+1) : null;    
-			    }
-			}
-
-			flatten = function(arr) {
-			    return arr.reduce(function(acc, val) {
-			        return acc.concat(val.constructor === Array ? flatten(val) : val);
-			    },[]);
-			}
-
-			var stringToSplit = doc.content;
-			var splitList = [". ", "! ", "? "];
-			doc.content = splitString(stringToSplit, splitList);
+            var doc = {
+                record_id: output.record_id_long.substring(output.record_id_long.length - 37, output.record_id_long.length - 1),
+                content: output.content.substring(indexOfBodyBegin, indexOfBodyEnd),
+            }
 
 
-			// Remove short or long phrases
-			var arrayTemp = [];
-			for (var j = 0; j < doc.content.length; j++) {
-				var temp = doc.content[j].split(" ");
-				if(temp.length > 4 && temp.length < 39) {
-					arrayTemp.push(doc.content[j]);
-				}
-			}
+            var options = {
+                include_script: false,
+                include_style: false,
+                compact_whitespace: true
+            };
 
-			//saving trac_id of useless docs to remove them later
-			if(arrayTemp.length == 0 || typeof arrayTemp === 'undefined') {
-				removingList.push(doc.record_id);
-			}
+            // Strip tags and decode HTML entities 
+            doc.content = html_strip.html_strip(doc.content, options);
 
-			doc.content = arrayTemp;
-			var isConsistent = true;
+            //Extract Phrases splitting by . ! ?
+            splitString = function(string, splitters) {
+                var list = [string];
+                for (var i = 0, len = splitters.length; i < len; i++) {
+                    traverseList(list, splitters[i], 0);
+                }
+                return flatten(list);
+            }
 
-			// writing on file
-			for(var x = 0; x<removingList.length;x++) {
-				if(doc.record_id === removingList[x]) {
-					isConsistent = false;
-				}
-			}
+            traverseList = function(list, splitter, index) {
+                if (list[index]) {
+                    if ((list.constructor !== String) && (list[index].constructor === String))
+                        (list[index] != list[index].split(splitter)) ? list[index] = list[index].split(splitter) : null;
+                    (list[index].constructor === Array) ? traverseList(list[index], splitter, 0): null;
+                    (list.constructor === Array) ? traverseList(list, splitter, index + 1): null;
+                }
+            }
 
+            flatten = function(arr) {
+                return arr.reduce(function(acc, val) {
+                    return acc.concat(val.constructor === Array ? flatten(val) : val);
+                }, []);
+            }
 
-			// FILLING FIRST OUTPUT: MATCHES AND TAGS
-			for (var z = 0; z < doc.content.length; z++) {
-				if(doc.content[z].search(ORD) !== -1) {
-					var matchORD = doc.content[z].match(ORD); 
-	    			wstream_out1.write(doc.record_id + "\t\t" + matchORD + "\t\t" + '#ORD' + "\n");
-
-				}
-				if(doc.content[z].search(DATE1) !== -1) {
-					var matchDATE = doc.content[z].match(DATE1);
-					wstream_out1.write(doc.record_id + "\t\t" + matchDATE + "\t\t" + '#DATE' + "\n");
-				}
-				if(doc.content[z].search(DATE3) !== -1) {
-					var matchDATE = doc.content[z].match(DATE3);
-					wstream_out1.write(doc.record_id + "\t\t" + matchDATE + "\t\t" + '#DATE' + "\n");
-
-				}
-				if(doc.content[z].search(DATE4) !== -1) {
-					var matchDATE = doc.content[z].match(DATE4);
-					wstream_out1.write(doc.record_id + "\t\t" + matchDATE + "\t\t" + '#DATE' + "\n");
-
-				}
-				if(doc.content[z].search(DATE5) !== -1) {
-					var matchDATE = doc.content[z].match(DATE5);
-					wstream_out1.write(doc.record_id + "\t\t" + matchDATE + "\t\t" + '#DATE' + "\n");
-
-				}
-				if(doc.content[z].search(DATE6) !== -1) {
-					var matchDATE = doc.content[z].match(DATE6);
-					wstream_out1.write(doc.record_id + "\t\t" + matchDATE + "\t\t" + '#DATE' + "\n");
-
-				}
-				if(doc.content[z].search(DATE7) !== -1) {
-					var matchDATE = doc.content[z].match(DATE7);
-					wstream_out1.write(doc.record_id + "\t\t" + matchDATE + "\t\t" + '#DATE' + "\n");
-					
-				}
-				if(doc.content[z].search(MONEY1) !== -1) {
-					var matchMONEY = doc.content[z].match(MONEY1);
-					wstream_out1.write(doc.record_id + "\t\t" + matchMONEY + "\t\t" + '#MONEY' + "\n");
-
-				}
-				if(doc.content[z].search(MONEY2) !== -1) {
-					var matchMONEY = doc.content[z].match(MONEY2);
-					wstream_out1.write(doc.record_id + "\t\t" + matchMONEY + "\t\t" + '#MONEY' + "\n");
-
-				}				
-				if(doc.content[z].search(MONEY3) !== -1) {
-					var matchMONEY = doc.content[z].match(MONEY3);
-					wstream_out1.write(doc.record_id + "\t\t" + matchMONEY + "\t\t" + '#MONEY' + "\n");
-
-				}				
-				if(doc.content[z].search(MONEY4) !== -1) {
-					var matchMONEY = doc.content[z].match(MONEY4);
-					wstream_out1.write(doc.record_id + "\t\t" + matchMONEY + "\t\t" + '#MONEY' + "\n");
-
-				}				
-				if(doc.content[z].search(DIST1) !== -1) {
-					var matchDIST = doc.content[z].match(DIST1);
-					wstream_out1.write(doc.record_id + "\t\t" + matchDIST + "\t\t" + '#DIST' + "\n");
-
-				}
-				if(doc.content[z].search(DIST2) !== -1) {
-					var matchDIST = doc.content[z].match(DIST2);
-					wstream_out1.write(doc.record_id + "\t\t" + matchDIST + "\t\t" + '#DIST' + "\n");
-
-				}
-				if(doc.content[z].search(PHONE) !== -1) {
-					var matchPHONE = doc.content[z].match(PHONE);
-					wstream_out1.write(doc.record_id + "\t\t" + matchPHONE + "\t\t" + '#PHONE' + "\n");
-
-				}		
-				if(doc.content[z].search(TIME) !== -1) {
-					var matchTIME = doc.content[z].match(TIME);
-					wstream_out1.write(doc.record_id + "\t\t" + matchTIME + "\t\t" + '#TIME' + "\n");
-
-				}
-			
-				if(doc.content[z].search(URL) !== -1) {
-					var matchURL = doc.content[z].match(URL);
-					wstream_out1.write(doc.record_id + "\t\t" + matchURL + "\t\t" + '#URL' + "\n");
-
-				}
-			}
+            var stringToSplit = doc.content;
+            var splitList = [". ", "! ", "? "];
+            doc.content = splitString(stringToSplit, splitList);
 
 
-			// FILLING SECOND OUTPUT: OLD PHRASES DUMP
-			if(isConsistent) {
-				for(var y = 0; y<doc.content.length; y++) {
-					wstream_out2.write(doc.record_id + "\t" + doc.content[y] + "\n");
-				}
-			
-			}
+            // Remove short or long phrases
+            var arrayTemp = [];
+            for (var j = 0; j < doc.content.length; j++) {
+                var temp = doc.content[j].split(" ");
+                if (temp.length > 4 && temp.length < 39) {
+                    arrayTemp.push(doc.content[j]);
+                }
+            }
 
-			// Replacing interest numbers with TAGS from body
-			for (var k = 0; k < doc.content.length; k++) {
-				doc.content[k] = doc.content[k].replace(ORD, '#ORD');
-				doc.content[k] = doc.content[k].replace(DATE1, '#DATE').replace(DATE3, '#DATE').replace(DATE5, '#DATE').replace(DATE4, '#DATE').replace(DATE6, '#DATE').replace(DATE7, '#DATE');
-				doc.content[k] = doc.content[k].replace(MONEY1, '#MONEY').replace(MONEY2, '#MONEY').replace(MONEY3, '#MONEY').replace(MONEY4, '#MONEY');
-				doc.content[k] = doc.content[k].replace(DIST1, '#DIST1').replace(DIST2, '#DIST2');
-				doc.content[k] = doc.content[k].replace(PHONE, ' #PHONE ');
-				doc.content[k] = doc.content[k].replace(TIME, '#TIME ');
-				doc.content[k] = doc.content[k].replace(URL, '#URL');
+            //saving trac_id of useless docs to remove them later
+            if (arrayTemp.length == 0 || typeof arrayTemp === 'undefined') {
+                removingList.push(doc.record_id);
+            }
 
-			}
-			
+            doc.content = arrayTemp;
+            var isConsistent = true;
 
-			// FILLING THIRD OUTPUT: NEW PHRASES DUMP
-			if(isConsistent) {
-				for(var y = 0; y<doc.content.length; y++) {
-					wstream_out3.write(doc.record_id + "\t" + doc.content[y] + "\n");
-				}
-				console.log(doc.record_id);
-			}
-		}
-
-		catch (err) {
-			console.log(err + "  CATCH");
-		}
-		//isConsistent =  true;
-	});
+            // writing on file
+            for (var x = 0; x < removingList.length; x++) {
+                if (doc.record_id === removingList[x]) {
+                    isConsistent = false;
+                }
+            }
 
 
+            // FILLING FIRST OUTPUT: MATCHES AND TAGS
+
+            // Example:
+            // Trec-id    StringToRemove    #TAG
+
+            for (var z = 0; z < doc.content.length; z++) {
+                if (doc.content[z].search(ORD) !== -1) {
+                    var matchORD = doc.content[z].match(ORD);
+                    wstream_out1.write(doc.record_id + "\t\t" + matchORD + "\t\t" + '#ORD' + "\n");
+
+                }
+                if (doc.content[z].search(DATE1) !== -1) {
+                    var matchDATE = doc.content[z].match(DATE1);
+                    wstream_out1.write(doc.record_id + "\t\t" + matchDATE + "\t\t" + '#DATE' + "\n");
+                }
+                if (doc.content[z].search(DATE3) !== -1) {
+                    var matchDATE = doc.content[z].match(DATE3);
+                    wstream_out1.write(doc.record_id + "\t\t" + matchDATE + "\t\t" + '#DATE' + "\n");
+
+                }
+                if (doc.content[z].search(DATE4) !== -1) {
+                    var matchDATE = doc.content[z].match(DATE4);
+                    wstream_out1.write(doc.record_id + "\t\t" + matchDATE + "\t\t" + '#DATE' + "\n");
+
+                }
+                if (doc.content[z].search(DATE5) !== -1) {
+                    var matchDATE = doc.content[z].match(DATE5);
+                    wstream_out1.write(doc.record_id + "\t\t" + matchDATE + "\t\t" + '#DATE' + "\n");
+
+                }
+                if (doc.content[z].search(DATE6) !== -1) {
+                    var matchDATE = doc.content[z].match(DATE6);
+                    wstream_out1.write(doc.record_id + "\t\t" + matchDATE + "\t\t" + '#DATE' + "\n");
+
+                }
+                if (doc.content[z].search(DATE7) !== -1) {
+                    var matchDATE = doc.content[z].match(DATE7);
+                    wstream_out1.write(doc.record_id + "\t\t" + matchDATE + "\t\t" + '#DATE' + "\n");
+
+                }
+                if (doc.content[z].search(MONEY1) !== -1) {
+                    var matchMONEY = doc.content[z].match(MONEY1);
+                    wstream_out1.write(doc.record_id + "\t\t" + matchMONEY + "\t\t" + '#MONEY' + "\n");
+
+                }
+                if (doc.content[z].search(MONEY2) !== -1) {
+                    var matchMONEY = doc.content[z].match(MONEY2);
+                    wstream_out1.write(doc.record_id + "\t\t" + matchMONEY + "\t\t" + '#MONEY' + "\n");
+
+                }
+                if (doc.content[z].search(MONEY3) !== -1) {
+                    var matchMONEY = doc.content[z].match(MONEY3);
+                    wstream_out1.write(doc.record_id + "\t\t" + matchMONEY + "\t\t" + '#MONEY' + "\n");
+
+                }
+                if (doc.content[z].search(MONEY4) !== -1) {
+                    var matchMONEY = doc.content[z].match(MONEY4);
+                    wstream_out1.write(doc.record_id + "\t\t" + matchMONEY + "\t\t" + '#MONEY' + "\n");
+
+                }
+                if (doc.content[z].search(DIST1) !== -1) {
+                    var matchDIST = doc.content[z].match(DIST1);
+                    wstream_out1.write(doc.record_id + "\t\t" + matchDIST + "\t\t" + '#DIST' + "\n");
+
+                }
+                if (doc.content[z].search(DIST2) !== -1) {
+                    var matchDIST = doc.content[z].match(DIST2);
+                    wstream_out1.write(doc.record_id + "\t\t" + matchDIST + "\t\t" + '#DIST' + "\n");
+
+                }
+                if (doc.content[z].search(PHONE) !== -1) {
+                    var matchPHONE = doc.content[z].match(PHONE);
+                    wstream_out1.write(doc.record_id + "\t\t" + matchPHONE + "\t\t" + '#PHONE' + "\n");
+
+                }
+                if (doc.content[z].search(TIME) !== -1) {
+                    var matchTIME = doc.content[z].match(TIME);
+                    wstream_out1.write(doc.record_id + "\t\t" + matchTIME + "\t\t" + '#TIME' + "\n");
+
+                }
+
+                if (doc.content[z].search(URL) !== -1) {
+                    var matchURL = doc.content[z].match(URL);
+                    wstream_out1.write(doc.record_id + "\t\t" + matchURL + "\t\t" + '#URL' + "\n");
+
+                }
+            }
 
 
+            // FILLING SECOND OUTPUT: OLD PHRASES DUMP
+
+            // Example:
+            // Trec-id    OldString
+
+            if (isConsistent) {
+                for (var y = 0; y < doc.content.length; y++) {
+                    wstream_out2.write(doc.record_id + "\t" + doc.content[y] + "\n");
+                }
+
+            }
+
+            // FILLING THIRD OUTPUT: NEW PHRASES DUMP
+
+            // Replacing interest numbers with TAGS from body
+            for (var k = 0; k < doc.content.length; k++) {
+                doc.content[k] = doc.content[k].replace(ORD, '#ORD');
+                doc.content[k] = doc.content[k].replace(DATE1, '#DATE').replace(DATE3, '#DATE').replace(DATE5, '#DATE').replace(DATE4, '#DATE').replace(DATE6, '#DATE').replace(DATE7, '#DATE');
+                doc.content[k] = doc.content[k].replace(MONEY1, '#MONEY').replace(MONEY2, '#MONEY').replace(MONEY3, '#MONEY').replace(MONEY4, '#MONEY');
+                doc.content[k] = doc.content[k].replace(DIST1, '#DIST1').replace(DIST2, '#DIST2');
+                doc.content[k] = doc.content[k].replace(PHONE, ' #PHONE ');
+                doc.content[k] = doc.content[k].replace(TIME, '#TIME ');
+                doc.content[k] = doc.content[k].replace(URL, '#URL');
+
+            }
+
+            // Example:
+            // Trec-id    NewString
+
+            if (isConsistent) {
+                for (var y = 0; y < doc.content.length; y++) {
+                    wstream_out3.write(doc.record_id + "\t" + doc.content[y] + "\n");
+                }
+                console.log(doc.record_id);
+            }
+        } catch (err) {
+            console.log(err + "  CATCH");
+        }
+    });
